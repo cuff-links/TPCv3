@@ -1,0 +1,12 @@
+﻿@using TPCv3.Domain.Entities
+@using TPCv3.Helpers
+
+@helper Tags(System.Web.Mvc.HtmlHelper htmlHelper,
+             IList<Tag> tags){
+    foreach (Tag tag in tags)
+    {
+        <div class="tags-div">
+            @htmlHelper.TagLink(tag)
+        </div>
+    }
+}

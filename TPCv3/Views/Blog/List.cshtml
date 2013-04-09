@@ -1,0 +1,38 @@
+﻿@using TPCv3.Domain.Entities
+@using TPCv3.Helpers
+@model TPCv3.Models.ListPostViewModel
+
+@{
+    ViewBag.Title = "Post";
+}
+<h2>@ViewBag.Title</h2>
+ 
+<div id="content">
+ 
+    
+ 
+    @if (Model.Posts.Any())
+    {
+        foreach (Post post in Model.Posts)
+        {
+            @Html.Partial("_PostTemplate", post)
+        }
+    }
+    else
+    {
+        <p>No posts found!</p>
+    }
+ 
+</div>
+<div class="pager">
+    @if (Model.PagingInfo.CurrentTag != null){
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Tag", new {page = x}))
+    }
+    else if (Model.PagingInfo.CurrentCategory != null){
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Category", new { page = x }))
+    }
+    else{
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page = x}))
+    }
+    
+</div>

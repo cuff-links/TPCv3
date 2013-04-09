@@ -1,0 +1,471 @@
+/*CSS Styling for the navigation menu */
+#menu
+{
+    -moz-border-radius: 50px;
+    -moz-box-shadow: 0 2px 1px #9c9c9c;
+    -webkit-box-shadow: 0 2px 1px #9c9c9c;
+    background: #111;
+    background: #111;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111), color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);
+    background: -o-linear-gradient(#444, #111);
+    background: -ms-linear-gradient(#444, #111);
+    border-radius: 10px;
+    box-shadow: 0 2px 1px #9c9c9c;
+    list-style: none;
+    margin: 0;
+    margin-top: 150px;
+    padding: 10px 0 0 0;
+    width: 100%;
+}
+
+#menu li
+{
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+#menu a
+{
+    color: #999;
+    float: left;
+    font: bold 12px/25px Arial, Helvetica;
+    height: 25px;
+    padding: 0 25px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+    text-transform: uppercase;
+}
+
+#menu li:hover > a
+{
+    color: #fafafa;
+}
+
+* html #menu li a:hover
+{
+    /* IE6 */
+    color: #fafafa;
+}
+
+#menu li:hover > ul
+{
+    display: block;
+}
+
+/* Sub-menu */
+
+#menu ul
+{
+    -moz-border-radius: 5px;
+    background: #111;
+    background: -moz-linear-gradient(#444, #111);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111), color-stop(1, #444));
+    background: -webkit-linear-gradient(#444, #111);
+    background: -o-linear-gradient(#444, #111);
+    background: -ms-linear-gradient(#444, #111);
+    background: linear-gradient(#444, #111);
+    border-radius: 5px;
+    display: none;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 35px;
+    z-index: 99999;
+}
+
+#menu ul li
+{
+    -moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu ul li:last-child
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#menu ul a
+{
+    display: block;
+    float: none;
+    height: auto;
+    line-height: 1;
+    padding: 10px;
+    text-transform: none;
+    white-space: nowrap;
+}
+
+* html #menu ul a
+{
+    /* IE6 */
+    height: 10px;
+    width: 150px;
+}
+
+*:first-child + html #menu ul a
+{
+    /* IE7 */
+    height: 10px;
+    width: 150px;
+}
+
+#menu ul a:hover
+{
+    background: #0186ba;
+    background: -moz-linear-gradient(#04acec, #0186ba);
+    background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+    background: -webkit-linear-gradient(#04acec, #0186ba);
+    background: -o-linear-gradient(#04acec, #0186ba);
+    background: -ms-linear-gradient(#04acec, #0186ba);
+    background: linear-gradient(#04acec, #0186ba);
+}
+
+#menu ul li:first-child a
+{
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after
+{
+    border-bottom: 8px solid #444;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    content: '';
+    height: 0;
+    left: 30px;
+    position: absolute;
+    top: -8px;
+    width: 0;
+}
+
+#menu ul li:first-child a:hover:after
+{
+    border-bottom-color: #04acec;
+}
+
+#menu ul li:last-child a
+{
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Clear floated elements */
+
+#menu:after
+{
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+* html #menu
+{
+    zoom: 1;
+}
+/* IE6 */
+
+*:first-child + html #menu
+{
+    zoom: 1;
+}
+/* IE7 */
+
+header, footer, nav, section
+{
+    display: block;
+}
+
+html, body
+{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: "Century Gothic", Times, serif;
+}
+
+#header
+{
+    border-bottom: #444 solid 1px;
+    height: 250px;
+    width: 100%;
+}
+
+#headerWrapper
+{
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1024px;
+    width: 1280px;
+}
+
+#headerLeft
+{
+    float: left;
+    min-width: 384px;
+    width: 480px;
+}
+
+#headerLeft img
+{
+    margin-top: 125px;
+}
+
+#headerRight
+{
+    float: left;
+    min-width: 640px;
+    width: 800px;
+}
+#searchDiv
+{
+    float: right;
+    margin: 20px 0;
+}
+#search-form
+{
+    float: right;
+}
+#txtSearch
+{
+    width: 120px;
+}
+#search-form p
+{
+    display: inline;
+}
+#sidebars
+{
+    float: right;
+    width: 318px;
+    min-width: 256px;
+    text-align: center;
+}
+#body
+{
+    background-color: #FFFFF9;
+    color: black;
+    width: 100%;
+    float: left;
+}
+#wrapper
+{
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 1024px;
+    width: 1280px;
+}
+#wrapperContent
+{
+    float: left;
+    width: 959px;
+    min-width: 767px; 
+}
+#content
+{
+    border-right: 1px solid #CDCDCD;
+    padding-top: 20px;
+}
+#footer
+{
+    border-top: #444 solid 1px;
+    color: white;
+    float: left;
+    height: 150px;
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#footer dl, #footer div dd, #footer dl dt
+{
+    float: left;
+    padding: 0;
+    width: 165px;
+}
+
+#footer div dd a, #footer dl dt a
+{
+    color: white;
+}
+
+#footer div dd a:hover, #footer dl dt a:hover
+{
+    color: #04acec;
+}
+
+#footer dl
+{
+    margin: 0;
+}
+
+#footer dl dt
+{
+    font-weight: bold;
+    margin: 20px 0 0 0;
+}
+
+#footer dl dd
+{
+    font-style: italic;
+    margin: 0;
+}
+
+#footerWrapper
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.projectDiv
+{
+    background: url("/Content/images/dgrey037.jpg") repeat transparent;
+    border: 2px #04acec solid;
+    border-radius: 10px;
+    float: left;
+    margin: 20px 0 40px;
+    width: 956px;
+}
+
+li.projectList
+{
+    display: inline;
+    float: left;
+    margin: 20px 13px;
+    text-align: center;
+}
+
+img.projectList
+{
+    border: 2px white solid;
+    border-radius: 10px;
+}
+
+img.projectList:hover
+{
+    border: 2px #04acec solid;
+    border-radius: 10px;
+}
+
+li.noStyle
+{
+    list-style: none;
+}
+
+.centerBlueHeading
+{
+    color: #04acec;
+    text-align: center;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a img
+{
+    border: none;
+}
+
+/* Styles for basic forms -----------------------------------------------------------*/
+
+fieldset
+{
+    border: 1px solid #ddd;
+    margin: 0 0 1.5em 0;
+    padding: 0 1.4em 1.4em 1.4em;
+}
+
+legend
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea
+{
+    min-height: 75px;
+}
+
+.editor-label
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field
+{
+    margin: 0.5em 0 0 0;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    background-color: #ffeeee;
+    border: 1px solid #ff0000;
+}
+
+.validation-summary-errors
+{
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+h1, h2, h3
+{
+    color: black;
+}
+h2
+{
+    font-family:"Century Gothic", Times, serif;
+    font-size: 48px;
+    border-bottom: double #CDCDCD 3px;
+    margin-bottom: 0;
+
+}
+
+a h3, a h4
+{
+    color: black;
+}
+
+a h3:hover, a h4:hover
+{
+    color: #04acec;
+}

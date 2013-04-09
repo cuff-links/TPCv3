@@ -1,0 +1,52 @@
+﻿@using TPCv3.Helpers
+@model TPCv3.Domain.Entities.Post
+
+<div class="post">
+    <div class="post-meta">
+        <div class="row">
+ 
+            <!--Heading-->
+            <div class="post-title">
+                <h3>@Html.PostLink(Model)</h3>
+            </div>
+ 
+        </div>
+ 
+        <div class="row">
+ 
+            <!--Category-->
+            <div class="post-category">
+                <span>Category: </span>@Html.CategoryLink(Model.Category)
+            </div>
+ 
+            <!--Tags-->
+            <div class="post-tags">
+                <span>Tags:</span>@Helpers.Tags(Html, Model.Tags.ToList())
+            </div>
+ 
+            <!--Posted date-->
+            <div class="posted-date">
+                @Model.PostedOn.ToConfigLocalTime()
+            </div>
+ 
+        </div>
+ 
+    </div>
+ 
+    <!--Short Description-->
+    <div class="post-body">
+        @Model.Description
+    </div>
+ 
+    <div class="post-foot">
+        @Html.ActionLink("Read More...", "Post", "Blog",
+                         new
+                             {
+                                 year = Model.PostedOn.Year,
+                                 month = Model.PostedOn.Month,
+                                 title = Model.UrlSlug
+                             },
+                         new {title = "Read the full article: " + Model.Title}
+             )
+    </div>
+</div>

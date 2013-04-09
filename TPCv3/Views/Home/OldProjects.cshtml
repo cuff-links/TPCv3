@@ -1,0 +1,142 @@
+﻿@*@using TPCv3.Models
+@model IEnumerable<Project>
+@{
+    ViewBag.Title = "The Power Coder - Projects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Projects</h1>
+<div id="content">    
+    <div id="contentWeb" class="projectDiv">
+    <h2 class="centerBlueHeading" id="webApps">Web Projects</h2>
+        <ul>
+            @{
+                IEnumerable<Project> webProjects = Model.Where(p => p.Category == "Web").ToList();
+                if (!webProjects.Any()){
+                    <li class="noStyle">No projects of this type exist.</li>
+                }
+                else{
+                    foreach (var p in webProjects){
+                        <li class="projectList noStyle">
+                            <ul>
+                                @if (p.IsDemo)
+                                {
+                                    if (p.ProjectId == "IONS"){
+                                        <li class="noStyle"><a target="_blank" href="http://www.thepowercoder.net/IONS/Default.aspx"><h3>Demo: @p.Name</h3></a></li>
+                                    }
+                                    else{
+                                        <li class="noStyle"><a target="_blank" href="http://www.thepowercoder.net/@p.ProjectId"><h3>Demo: @p.Name</h3></a></li>
+                                    }
+                                    
+                                }
+                                else{
+                                    <li class="noStyle">
+                                        <h3>@p.Name</h3>
+                                    </li>
+                                }
+                                
+                                <li class="noStyle">
+                                    <a data-caption="@p.Description" rel="webGallery" class="fancybox" href="@Url.Content("~/Content/" + p.ImageUrl)">
+                                        <img class="projectList" src="@Url.Content("~/Content/" + p.ThumbUrl)" alt="@p.Name" />
+                                    </a>
+                                </li>    
+                                @if (!String.IsNullOrEmpty(p.SourceUrl)){
+                                     if (p.SourceUrl.StartsWith("~")){
+                                        <li class="noStyle">
+                                            <a href="@Url.Content(p.SourceUrl)"><h4>Source</h4></a>
+                                        </li>
+                                     }
+                                     else{
+                                         <li class="noStyle">
+                                             <a target="_blank" href="@p.SourceUrl"><h4>Source</h4></a>
+                                         </li>
+                                     }
+                                }                            
+                            </ul>
+                        </li>
+
+                    }
+                }
+            }
+        </ul>
+    </div>
+    <div id="contentDesktop" class="projectDiv">
+        <h2 class="centerBlueHeading" id="deskApps">Desktop Projects</h2>
+        <ul>
+            @{
+                IEnumerable<Project> desktopProjects = Model.Where(p => p.Category == "Desktop").OrderBy(p => p.IsDemo).ToList();
+                if (!desktopProjects.Any()){
+                    <li class="noStyle">No projects of this type exist.</li>
+                }
+                else{
+                    foreach (var p in desktopProjects){
+                        <li class="projectList noStyle">
+                            <ul>
+                                <li class="noStyle">
+                                    <h3>@p.Name</h3>
+                                </li>
+                                <li class="noStyle">
+                                    <a data-caption="@p.Description" rel="desktopGallery" class="fancybox" href="@Url.Content("~/Content/" + p.ImageUrl)">
+                                        <img class="projectList" src="@Url.Content("~/Content/" + p.ThumbUrl)" alt="@p.Name" />
+                                    </a>
+                                </li>
+                                @if (!String.IsNullOrEmpty(p.SourceUrl)){
+                                     if (p.SourceUrl.StartsWith("~")){
+                                        <li class="noStyle">
+                                            <a href="@Url.Content(p.SourceUrl)"><h4>Source</h4></a>
+                                        </li>
+                                     }
+                                     else{
+                                         <li class="noStyle">
+                                             <a target="_blank" href="@p.SourceUrl"><h4>Source</h4></a>
+                                         </li>
+                                     }
+                                }   
+                            </ul>
+                        </li>
+
+                    }
+                }
+            }
+        </ul>
+    </div>
+    <div id="contentOther" class="projectDiv">
+        <h2 class="centerBlueHeading" id="otherApps">Other Projects</h2>
+        <ul>
+            @{
+                IEnumerable<Project> otherProjects = Model.Where(p => p.Category != "Desktop" && p.Category != "Web").ToList();
+                if (!otherProjects.Any()){
+                    <li class="noStyle">No projects of this type exist.</li>
+                }
+                else{
+                    foreach (var p in otherProjects){
+                        <li class="projectList noStyle">
+                            <ul>
+                                <li class="noStyle">
+                                    <h3>@p.Name</h3>
+                                </li>
+                                <li class="noStyle">
+                                    <a data-caption="@p.Description" rel="otherGallery" class="fancybox" href="@Url.Content("~/Content/" + p.ImageUrl)">
+                                        <img class="projectList" src="@Url.Content("~/Content/" + p.ThumbUrl)" alt="@p.Name" />
+                                    </a>
+                                </li>
+                                @if (!String.IsNullOrEmpty(p.SourceUrl)){
+                                     if (p.SourceUrl.StartsWith("~")){
+                                        <li class="noStyle">
+                                            <a href="@Url.Content(p.SourceUrl)"><h4>Source</h4></a>
+                                        </li>
+                                     }
+                                     else{
+                                         <li class="noStyle">
+                                             <a target="_blank" href="@p.SourceUrl"><h4>Source</h4></a>
+                                         </li>
+                                     }
+                                }   
+                            </ul>
+                        </li>
+
+                    }
+                }
+            }
+        </ul>
+    </div>    
+</div>*@

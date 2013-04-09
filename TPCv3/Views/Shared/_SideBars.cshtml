@@ -1,0 +1,8 @@
+﻿@model TPCv3.Models.WidgetViewModel
+
+ 
+<div>
+  @Html.Partial("_Categories", Model.Categories)
+  @Html.Partial("_Tags", Model.Tags)
+  @Html.Partial("_LatestPosts", Model.LatestPosts)
+</div>

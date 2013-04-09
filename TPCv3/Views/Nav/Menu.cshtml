@@ -1,0 +1,12 @@
+﻿@model IEnumerable<string>
+
+
+@Html.ActionLink("The Power Blog", "List", "Blog")
+
+@foreach (string link in Model)
+{
+    @Html.RouteLink(link, new
+                              {
+                                  controller = "Blog"
+                              })
+}

@@ -1,0 +1,19 @@
+﻿<div id="searchDiv">
+    @using (Html.BeginForm(
+
+    "Search",   //Action
+    "Blog",     //Controller
+    FormMethod.Get, //Method
+    new{ id = "search-form"}))  
+    {
+        <p>
+            Search Blog: 
+        </p>
+        <p>
+            @Html.TextBox("txtSearch")
+        </p>
+        <p>
+            <input type="submit" value="Search"/>
+        </p>
+    }
+</div>
