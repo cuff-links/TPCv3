@@ -4,6 +4,7 @@ using System.Web.Routing;
 using Ninject;
 using TPCv3.Domain.Abstract;
 using TPCv3.Domain.Concrete;
+using TPCv3.Providers;
 
 namespace TPCv3.Infrastructure{
     public class NinjectControllerFactory : DefaultControllerFactory{
@@ -32,6 +33,7 @@ namespace TPCv3.Infrastructure{
             //Bind Interface to the consuming Entities. 
             ninjectKernel.Bind<IProjectRepository>().To<EfProjectRepository>();
             ninjectKernel.Bind<IBlogRepository>().To<EfBlogRepository>();
+            ninjectKernel.Bind<IAuthProvider>().To<AuthProvider>();
         }
 
         #endregion

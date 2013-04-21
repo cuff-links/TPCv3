@@ -1,11 +1,24 @@
 ﻿using System.Web.Mvc;
-using System.Web.Security;
-
 using TPCv3.Models;
+using TPCv3.Providers;
 
 namespace TPCv3.Controllers{
     [Authorize]
     public class AdminController : Controller{
+        #region Constants and Fields
+
+        private readonly IAuthProvider _authProvider;
+
+        #endregion
+
+        #region Constructors and Destructors
+
+        public AdminController(IAuthProvider authProvider){
+            _authProvider = authProvider;
+        }
+
+        #endregion
+
         //
         // GET: /Admin/
 
@@ -13,39 +26,44 @@ namespace TPCv3.Controllers{
 
         [AllowAnonymous]
         public ActionResult Login(string returnUrl){
-            if (this.User.Identity.IsAuthenticated){
-                if (!string.IsNullOrEmpty(returnUrl) && this.Url.IsLocalUrl(returnUrl)){
-                    return this.Redirect(returnUrl);
-                }
-                return this.RedirectToAction("Manage");
+            if (_authProvider.IsLoggedIn){
+                return RedirectToUrl(returnUrl);
             }
-
-            this.ViewBag.ReturnUrl = returnUrl;
-            return this.View();
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl){
-            if (this.ModelState.IsValid){
-                if (Membership.ValidateUser(model.Username, model.Password)){
-                    FormsAuthentication.SetAuthCookie(model.Username, false);
-
-                    if (!string.IsNullOrEmpty(returnUrl) && this.Url.IsLocalUrl(returnUrl)){
-                        return this.Redirect(returnUrl);
-                    }
-                    return this.RedirectToAction("Manage");
-                }
-                this.ModelState.AddModelError("", "The username or password provided is incorrect.");
+            if (ModelState.IsValid && _authProvider.Login(model.Username, model.Password)){
+                return RedirectToUrl(returnUrl);
             }
-            return this.View();
+            ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            return View(model);
         }
 
         public ActionResult Logout(){
-            FormsAuthentication.SignOut();
-            this.Session.Clear();
-            return this.RedirectToAction("Login", "Admin");
+            _authProvider.Logout();
+
+            return RedirectToAction("Login", "Admin");
+        }
+
+        public ActionResult Manage(){
+            return View();
+        }
+
+        #endregion
+
+        #region Methods
+
+        private ActionResult RedirectToUrl(string returnUrl){
+            bool isLocal = Url.IsLocalUrl(returnUrl);
+            if (isLocal){
+                return Redirect(returnUrl);
+            }
+            return RedirectToAction("Manage");
         }
 
         #endregion
