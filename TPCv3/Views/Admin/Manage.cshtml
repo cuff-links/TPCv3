@@ -17,7 +17,7 @@
     <link href="/Content/themes/TPC/jquery-ui-1.10.2.custom/css/custom-theme/jquery-ui-1.10.2.custom.min.css" rel="stylesheet" />
  
     <!-- jqgrid -->
-    <link href="/Content/jquery.jqGrid/css/ui.jqgrid.css" rel="stylesheet" />
+    <link href="/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
     <script src="/Scripts/jquery.jqGrid.min.js"></script>
     <script src="/Scripts/i18n/grid.locale-en.js"></script>
  
@@ -32,7 +32,7 @@
      
     <!-- logout link -->
     <div style="text-align:right; margin-bottom:5px;">
-        <a href="/Admin/Logout">logout</a>
+        @Html.ActionLink("Logout", "Logout")
     </div>
  
     <h2>Manage Posts, Categories and Tags</h2>

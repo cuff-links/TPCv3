@@ -68,3 +68,5 @@ C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3\bin\System.We
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3\bin\System.Web.WebPages.xml
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3\bin\System.Web.WebPages.Razor.xml
+C:\Users\SDORLUS\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3\bin\Newtonsoft.Json.dll
+C:\Users\SDORLUS\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3\bin\Newtonsoft.Json.xml

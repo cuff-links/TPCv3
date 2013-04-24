@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+
 using TPCv3.Domain.Entities;
 
 namespace TPCv3.Domain.Abstract{
@@ -12,13 +13,17 @@ namespace TPCv3.Domain.Abstract{
 
         #region Public Methods and Operators
 
-        IList<Category> Categories();
+        int AddPost(Post post);
 
-        IList<Tag> Tags();
+        IList<Category> Categories();
 
         Category Category(string categorySlug);
 
+        Post Post(int year, int month, string titleSlug);
+
         IQueryable<Post> Posts(int pagesToSkip, int pageSize);
+
+        IQueryable<Post> Posts(int pageNo, int pageSize, string sortColumn, bool sortByAscending);
 
         IQueryable<Post> PostsForCategory(string categorySlug, int pagesToSkip, int pageSize);
 
@@ -26,11 +31,11 @@ namespace TPCv3.Domain.Abstract{
 
         IQueryable<Post> PostsForTags(string tagSlug, int pagesToSkip, int pageSize);
 
-        Post Post(int year, int month, string titleSlug);
-
         Tag Tag(string tagSlug);
 
-        int TotalPosts();
+        IList<Tag> Tags();
+
+        int TotalPosts(bool checkIsPublished = true);
 
         int TotalPostsForCategory(string categorySlug);
 

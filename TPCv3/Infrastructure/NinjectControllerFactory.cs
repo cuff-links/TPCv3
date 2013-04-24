@@ -10,14 +10,14 @@ namespace TPCv3.Infrastructure{
     public class NinjectControllerFactory : DefaultControllerFactory{
         #region Constants and Fields
 
-        private readonly IKernel ninjectKernel;
+        private readonly IKernel _ninjectKernel;
 
         #endregion
 
         #region Constructors and Destructors
 
         public NinjectControllerFactory(){
-            ninjectKernel = new StandardKernel();
+            _ninjectKernel = new StandardKernel();
             AddBindings();
         }
 
@@ -26,14 +26,14 @@ namespace TPCv3.Infrastructure{
         #region Methods
 
         protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType){
-            return controllerType == null ? null : (IController) ninjectKernel.Get(controllerType);
+            return controllerType == null ? null : (IController) _ninjectKernel.Get(controllerType);
         }
 
         private void AddBindings(){
             //Bind Interface to the consuming Entities. 
-            ninjectKernel.Bind<IProjectRepository>().To<EfProjectRepository>();
-            ninjectKernel.Bind<IBlogRepository>().To<EfBlogRepository>();
-            ninjectKernel.Bind<IAuthProvider>().To<AuthProvider>();
+            _ninjectKernel.Bind<IProjectRepository>().To<EfProjectRepository>();
+            _ninjectKernel.Bind<IBlogRepository>().To<EfBlogRepository>();
+            _ninjectKernel.Bind<IAuthProvider>().To<AuthProvider>();
         }
 
         #endregion

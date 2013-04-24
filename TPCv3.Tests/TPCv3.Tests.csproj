@@ -53,6 +53,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TPCv3.Domain\TPCv3.Domain.csproj">
+      <Project>{ae544039-7627-4c02-b0b0-90fc40c5d772}</Project>
+      <Name>TPCv3.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TPCv3\TPCv3.WebUI.csproj">
       <Project>{9bd9c583-67d7-4cc5-be26-ce88c3a9462a}</Project>
       <Name>TPCv3.WebUI</Name>

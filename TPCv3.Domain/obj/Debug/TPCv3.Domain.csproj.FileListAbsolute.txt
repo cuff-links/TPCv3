@@ -12,4 +12,5 @@ C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\bin\De
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\bin\Debug\EntityFramework.xml
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\obj\Debug\TPCv3.Domain.dll
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\obj\Debug\TPCv3.Domain.pdb
-C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\obj\Debug\TPCv3.Domain.csprojResolveAssemblyReference.cache
+C:\Users\SDORLUS\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SDORLUS\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Domain\bin\Debug\Newtonsoft.Json.xml

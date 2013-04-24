@@ -42,3 +42,5 @@ C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Tests\bin\Deb
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Tests\obj\Debug\TPCv3.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Tests\obj\Debug\TPCv3.Tests.dll
 C:\Users\Owner\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Tests\obj\Debug\TPCv3.Tests.pdb
+C:\Users\SDORLUS\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\SDORLUS\Dropbox\Visual_Studio_Projects\Projects\TPCv3\TPCv3.Tests\bin\Debug\Newtonsoft.Json.xml
