@@ -66,17 +66,17 @@ namespace TPCv3{
             routes.MapRoute(
                 "Category",
                 //Route Name
-                "Category/{category}/Page_{page}",
+                "Category/{selectedCategory}/Page_{categoryPage}",
                 //URL with Parameters
-                new {controller = "Blog", action = "Category", page = 1}
+                new {controller = "Blog", action = "Category", categoryPage = 1}
                 //Parameter defaults
                 );
             routes.MapRoute(
                 "Tag",
                 //Route Name
-                "Tag/{tag}/Page_{page}",
+                "Tag/{tag}/Page_{tagPage}",
                 //URL with parameters
-                new {controller = "Blog", action = "Tag", page = 1});
+                new {controller = "Blog", action = "Tag", tagPage = 1});
             routes.MapRoute(
                 "Default",
                 // Route name

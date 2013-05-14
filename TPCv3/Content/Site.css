@@ -31,12 +31,11 @@
 {
     color: #999;
     float: left;
-    font: bold 12px/25px Arial, Helvetica;
+    font-family: 'Goudy Bookletter 1911', serif;
     height: 25px;
     padding: 0 25px;
     text-decoration: none;
     text-shadow: 0 1px 0 #000;
-    text-transform: uppercase;
 }
 
 #menu li:hover > a
@@ -198,7 +197,7 @@ html, body
     background-color: #000000;
     margin: 0;
     padding: 0;
-    font-family: "Century Gothic", Times, serif;
+    font-family: 'Josefin Slab', serif;
 }
 
 #header
@@ -260,14 +259,15 @@ html, body
 }
 #body
 {
-    background-color: #FFFFF9;
-    color: black;
+    background-color: #111;
+    color: #FFFFFF;
     width: 100%;
     float: left;
+    min-height: 600px;
 }
 #wrapper
 {
-    color: black;
+    color: #ffffff;
     margin-left: auto;
     margin-right: auto;
     min-width: 1024px;
@@ -286,7 +286,7 @@ html, body
 }
 #footer
 {
-    border-top: #444 solid 1px;
+    border-top: #111 solid 1px;
     color: white;
     float: left;
     height: 150px;
@@ -449,11 +449,12 @@ textarea
 
 h1, h2, h3
 {
-    color: black;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #9c9c9c;
 }
 h2
 {
-    font-family:"Century Gothic", Times, serif;
+   /*font-family:"Century Gothic", Times, serif;*/
     font-size: 48px;
     border-bottom: double #CDCDCD 3px;
     margin-bottom: 0;
@@ -468,4 +469,49 @@ a h3, a h4
 a h3:hover, a h4:hover
 {
     color: #04acec;
+}
+div.pager {
+    margin: 10px 0;
+}
+div.pager a 
+{
+    color: white;
+    margin: 10px 3px;
+    padding: 5px;
+}
+div.pager a:visited {
+    color: white;
+}
+div.pager a:hover {
+    color: white !important;
+    background-color: #04acec !important;
+}
+div.pager a.selected_paginator {
+    color: white;
+    background-color: #008B00;
+    font-weight: bolder;
+}
+.categoryLink , .tagLink, .categoryLink:visited, .taglink:visited
+{
+    margin: 0 5px 0 0;
+    color: white;
+    text-decoration: underline;
+}
+.tagList
+{
+    float: left;
+    list-style: none;
+}
+#latestPost
+{
+    clear: both;
+    margin-top: 10px;
+}
+.categoryLink:hover , .tagLink:hover
+{
+    color: #04acec;
+}
+.tags .sidebar
+{
+    margin-bottom: 15px;
 }

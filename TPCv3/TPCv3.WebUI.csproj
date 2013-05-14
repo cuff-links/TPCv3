@@ -130,6 +130,7 @@
     <Compile Include="Helpers\CustomDateTimeConverter.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\PagingHelpers.cs" />
+    <Compile Include="Helpers\PostModelBinder.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
     <Compile Include="Models\JqInViewModel.cs" />
     <Compile Include="Models\ListPostViewModel.cs" />
@@ -1288,7 +1289,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60866</DevelopmentServerPort>
+          <DevelopmentServerPort>9688</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

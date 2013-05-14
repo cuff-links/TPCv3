@@ -25,14 +25,18 @@
  
 </div>
 <div class="pager">
-    @if (Model.PagingInfo.CurrentTag != null){
-        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Tag", new {page = x}))
-    }
-    else if (Model.PagingInfo.CurrentCategory != null){
-        @Html.PageLinks(Model.PagingInfo, x => Url.Action("Category", new { page = x }))
-    }
-    else{
-        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page = x}))
-    }
+
+        @if (Model.PagingInfo.CurrentTag != null)
+        {
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Tag", new { tagPage = x}))
+        }
+        else if (Model.PagingInfo.CurrentCategory != null)
+        {
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Category", new { categoryPage = x }))
+        }
+        else
+        {
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+        }
     
 </div>

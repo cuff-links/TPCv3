@@ -6,24 +6,24 @@ namespace TPCv3.Domain.Concrete{
     public class EfProjectRepository : IProjectRepository{
         #region Constants and Fields
 
-        private readonly EfDbContext _context = new EfDbContext();
+        private readonly EfDbContext _context = MyModelDbContextSingleton.Instance;
 
         #endregion
 
         public IQueryable<Project> ProjectsForCategory(string categorySlug, int pageNo, int pageSize){
-            var projectsForCategory =  _context.Projects.Where(
+            var projectsForCategory = _context.Projects.Where(
                 p => p.Category.Equals(categorySlug)).Skip
                 (pageNo*pageSize).Take(pageSize);
             return projectsForCategory;
         }
 
         public int TotalProjects(){
-            var projectCount =  _context.Projects.Count();
+            var projectCount = _context.Projects.Count();
             return projectCount;
         }
 
         public int TotalProjectsForCategory(string categorySlug){
-            var projectCountForCategory =  _context.Projects.Count(p => p.Category.Equals(categorySlug));
+            var projectCountForCategory = _context.Projects.Count(p => p.Category.Equals(categorySlug));
             return projectCountForCategory;
         }
 
