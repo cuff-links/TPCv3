@@ -13,7 +13,11 @@ namespace TPCv3.Helpers{
                 new {year = post.PostedOn.Year, month = post.PostedOn.Month, title = post.UrlSlug},
                 new
                     {
+<<<<<<< HEAD
                         title = String.Format("Read full article: " + post.Title),
+=======
+                        title = post.Title,
+>>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
                         @class = "postTitle"
                     });
         }
@@ -26,6 +30,7 @@ namespace TPCv3.Helpers{
                 new {selectedCategory = category.UrlSlug},
                 new
                     {
+<<<<<<< HEAD
                         title = String.Format("See all posts about {0}.", category.Name),
                         @class = "categoryLink"
                     });
@@ -42,6 +47,11 @@ namespace TPCv3.Helpers{
                         title = projectCategory.Description,
                         @class = "projectCategoryLink"
                     });
+=======
+                        title = String.Format("See all posts in the {0} category", category.Name),
+                        @class = "categoryLink"
+                    });
+>>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
         }
 
         public static MvcHtmlString TagLink(this HtmlHelper helper, Tag tag){
@@ -52,6 +62,7 @@ namespace TPCv3.Helpers{
                 new {tag = tag.UrlSlug},
                 new
                     {
+<<<<<<< HEAD
                         title = String.Format("See all posts that mention {0}.", tag.Name),
                         @class = "tagLink"
                     });
@@ -109,6 +120,11 @@ namespace TPCv3.Helpers{
                         return "DEC";
                     }
             }
+=======
+                        title = String.Format("See all posts tagged {0}", tag.Name),
+                        @class = "tagLink"
+                    });
+>>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
         }
     }
 }

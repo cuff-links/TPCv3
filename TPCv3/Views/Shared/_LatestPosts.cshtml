@@ -1,10 +1,18 @@
 ﻿@using TPCv3.Helpers
 @model IList<TPCv3.Domain.Entities.Post>
+<<<<<<< HEAD
 <div class="sidebar latestPostDiv">
   <h3 id="latestPost" style="padding-top:15px;">5 Most Recent Posts</h3>
  
   @if (Model.Count > 0){
       <ul class="latestPostList">
+=======
+<div class="sidebar">
+  <h3 id="latestPost">Latest Posts</h3>
+ 
+  @if (Model.Count > 0){
+      <ul>
+>>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
           @if (Model.Count < 5){
 
               foreach (var post in Model){

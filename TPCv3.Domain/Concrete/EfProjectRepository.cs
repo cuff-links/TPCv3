@@ -12,6 +12,7 @@ namespace TPCv3.Domain.Concrete{
 
         #endregion
 
+<<<<<<< HEAD
         #region IProjectRepository Members
 
         public IQueryable<Project> ProjectsForCategory(string categorySlug, int pagesToSkip, int pageSize){
@@ -34,13 +35,28 @@ namespace TPCv3.Domain.Concrete{
 
         public int TotalProjects(){
             int projectCount = _context.Projects.Count();
+=======
+        public IQueryable<Project> ProjectsForCategory(string categorySlug, int pageNo, int pageSize){
+            var projectsForCategory = _context.Projects.Where(
+                p => p.Category.Equals(categorySlug)).Skip
+                (pageNo*pageSize).Take(pageSize);
+            return projectsForCategory;
+        }
+
+        public int TotalProjects(){
+            var projectCount = _context.Projects.Count();
+>>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
             return projectCount;
         }
 
         public int TotalProjectsForCategory(string categorySlug){
+<<<<<<< HEAD
             int projectCountForCategory = categorySlug == "All"
                                               ? TotalProjects()
                                               : _context.Projects.Count(p => p.Category.Name.Equals(categorySlug));
+=======
+            var projectCountForCategory = _context.Projects.Count(p => p.Category.Equals(categorySlug));
+>>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
             return projectCountForCategory;
         }
 
