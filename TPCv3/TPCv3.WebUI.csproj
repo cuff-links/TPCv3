@@ -74,6 +74,7 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -122,7 +123,6 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,11 +130,13 @@
     <Compile Include="Helpers\CustomDateTimeConverter.cs" />
     <Compile Include="Helpers\Extensions.cs" />
     <Compile Include="Helpers\PagingHelpers.cs" />
+    <Compile Include="Helpers\PostModelBinder.cs" />
     <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
     <Compile Include="Models\JqInViewModel.cs" />
     <Compile Include="Models\ListPostViewModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PagingInfo.cs" />
+    <Compile Include="Models\PortfolioSideBarViewModel.cs" />
     <Compile Include="Models\ProjectsListViewModel.cs" />
     <Compile Include="Models\WidgetViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,10 +149,23 @@
       <DependentUpon>TPC.mdf</DependentUpon>
     </Content>
     <Content Include="Content\images\banner.png" />
+    <Content Include="Content\images\banner1.png" />
+    <Content Include="Content\images\banner2.jpg" />
+    <Content Include="Content\images\Best_Practices_White.png" />
+    <Content Include="Content\images\brackets.jpg" />
+    <Content Include="Content\images\brackets.png" />
+    <Content Include="Content\images\Build_Software.png" />
+    <Content Include="Content\images\Build_Software_Clear.png" />
+    <Content Include="Content\images\Build_Software_White.png" />
+    <Content Include="Content\images\Collaborate_White.png" />
     <Content Include="Content\images\dgrey037.jpg" />
     <Content Include="Content\images\Projects\Full\ionsFull.png" />
     <Content Include="Content\images\Projects\Thumbs\ionsThumb.png" />
-    <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
+    <Content Include="Content\images\Test_Software.png" />
+    <Content Include="Content\images\Test_Software_White.png" />
+    <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -903,6 +918,24 @@
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ParallaxContentSlider\css\demo.css" />
+    <Content Include="Scripts\ParallaxContentSlider\css\fonts\BebasNeue-webfont.svg" />
+    <Content Include="Scripts\ParallaxContentSlider\css\fonts\Dharma Type Font License.txt" />
+    <Content Include="Scripts\ParallaxContentSlider\css\nojs.css" />
+    <Content Include="Scripts\ParallaxContentSlider\css\style.css" />
+    <Content Include="Scripts\ParallaxContentSlider\css\style2.css" />
+    <Content Include="Scripts\ParallaxContentSlider\images\1.png" />
+    <Content Include="Scripts\ParallaxContentSlider\images\2.png" />
+    <Content Include="Scripts\ParallaxContentSlider\images\3.png" />
+    <Content Include="Scripts\ParallaxContentSlider\images\4.png" />
+    <Content Include="Scripts\ParallaxContentSlider\images\arrows.png" />
+    <Content Include="Scripts\ParallaxContentSlider\images\bg.png" />
+    <Content Include="Scripts\ParallaxContentSlider\images\ImageAttribution.txt" />
+    <Content Include="Scripts\ParallaxContentSlider\images\waves.gif" />
+    <Content Include="Scripts\ParallaxContentSlider\images\wavesBlue.gif" />
+    <Content Include="Scripts\ParallaxContentSlider\js\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\ParallaxContentSlider\js\jquery.cslider.js" />
+    <Content Include="Scripts\ParallaxContentSlider\js\modernizr.custom.28468.js" />
     <Content Include="Scripts\tinymce\langs\en.js" />
     <Content Include="Scripts\tinymce\license.txt" />
     <Content Include="Scripts\tinymce\plugins\advhr\css\advhr.css" />
@@ -1186,6 +1219,19 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\Shared\_PortfolioMenu.cshtml" />
+    <Content Include="Views\Shared\_PortfolioSideBar.cshtml" />
+    <Content Include="Views\Shared\_ProjectTemplate.cshtml" />
+    <Content Include="Scripts\ParallaxContentSlider\css\fonts\BebasNeue-webfont.eot" />
+    <Content Include="Scripts\ParallaxContentSlider\css\fonts\BebasNeue-webfont.ttf" />
+    <Content Include="Scripts\ParallaxContentSlider\css\fonts\BebasNeue-webfont.woff" />
+    <Content Include="Scripts\ParallaxContentSlider\images\Thumbs.db" />
+    <Content Include="Views\Shared\_Disqus.cshtml" />
+    <Content Include="Views\Shared\_AddThisPostTemplate.cshtml" />
+    <Content Include="Views\Shared\_AddThisArticle.cshtml" />
+    <Content Include="Views\Blog\Feed.cshtml" />
+    <Content Include="Views\Shared\_RssPost.cshtml" />
+    <Content Include="Views\Home\Thanks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Downloads\Source\SQL.zip" />
@@ -1288,7 +1334,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60866</DevelopmentServerPort>
+          <DevelopmentServerPort>49664</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

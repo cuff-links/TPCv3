@@ -13,6 +13,8 @@ namespace TPCv3.Domain.Concrete{
 
         public DbSet<Tag> Tags { get; set; }
 
+        public DbSet<ProjectCategory> ProjectCategories { get; set; }
+
         #endregion
     }
 }

@@ -3,10 +3,11 @@
 
 @helper Tags(System.Web.Mvc.HtmlHelper htmlHelper,
              IList<Tag> tags){
-    foreach (Tag tag in tags)
+<span>
+    @foreach (Tag tag in tags)
     {
-        <div class="tags-div">
-            @htmlHelper.TagLink(tag)
-        </div>
-    }
+        @htmlHelper.TagLink(tag)
+    }   
+</span>
 }
+

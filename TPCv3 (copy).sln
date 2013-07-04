@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPCv3.WebUI", "TPCv3\TPCv3.WebUI.csproj", "{9BD9C583-67D7-4CC5-BE26-CE88C3A9462A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPCv3.Domain", "TPCv3.Domain\TPCv3.Domain.csproj", "{AE544039-7627-4C02-B0B0-90FC40C5D772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPCv3.Tests", "TPCv3.Tests\TPCv3.Tests.csproj", "{69289739-9B01-453C-BCE7-E3CD5E152998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BD9C583-67D7-4CC5-BE26-CE88C3A9462A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD9C583-67D7-4CC5-BE26-CE88C3A9462A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD9C583-67D7-4CC5-BE26-CE88C3A9462A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD9C583-67D7-4CC5-BE26-CE88C3A9462A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE544039-7627-4C02-B0B0-90FC40C5D772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE544039-7627-4C02-B0B0-90FC40C5D772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE544039-7627-4C02-B0B0-90FC40C5D772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE544039-7627-4C02-B0B0-90FC40C5D772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69289739-9B01-453C-BCE7-E3CD5E152998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69289739-9B01-453C-BCE7-E3CD5E152998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69289739-9B01-453C-BCE7-E3CD5E152998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69289739-9B01-453C-BCE7-E3CD5E152998}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

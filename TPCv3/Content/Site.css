@@ -5,7 +5,6 @@
     -moz-box-shadow: 0 2px 1px #9c9c9c;
     -webkit-box-shadow: 0 2px 1px #9c9c9c;
     background: #111;
-    background: #111;
     background: -moz-linear-gradient(#444, #111);
     background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111), color-stop(1, #444));
     background: -webkit-linear-gradient(#444, #111);
@@ -27,17 +26,17 @@
     position: relative;
 }
 
-#menu a
-{
-    color: #999;
-    float: left;
-    font: bold 12px/25px Arial, Helvetica;
-    height: 25px;
-    padding: 0 25px;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #000;
-    text-transform: uppercase;
-}
+    #menu a {
+        color: #999;
+        float: left;
+        font-family: 'Goudy Bookletter 1911', serif;
+        font-size: 12pt;
+        height: 25px;
+        padding: 0 25px;
+        text-decoration: none;
+        -webkit-text-shadow: 0 1px 0 #000;
+        text-shadow: 0 1px 0 #000;
+    }
 
 #menu li:hover > a
 {
@@ -198,13 +197,15 @@ html, body
     background-color: #000000;
     margin: 0;
     padding: 0;
-    font-family: "Century Gothic", Times, serif;
+    font-family: 'Josefin Slab', serif;
+    font-size: 16pt;
+    width: 100%;
 }
 
 #header
 {
-    border-bottom: #444 solid 1px;
-    height: 250px;
+    border-bottom: #04acec solid 1px;
+    height: 375px;
     width: 100%;
 }
 
@@ -234,65 +235,100 @@ html, body
     min-width: 640px;
     width: 800px;
 }
+
 #searchDiv
 {
     float: right;
     margin: 20px 0;
 }
+div.feeddiv {
+  float: right;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+div.feeddiv a, div.feeddiv a:visited{
+    color: white;
+}
+div.feeddiv a:hover{
+    color: #04acec;
+}
 #search-form
 {
     float: right;
 }
+
 #txtSearch
 {
     width: 120px;
+    border-radius: 5px;
+    border: 3px #000 solid;
 }
+#txtSearch:hover
+{
+    border: 3px #04acec solid;
+}
+
 #search-form p
 {
     display: inline;
 }
+
 #sidebars
 {
     float: right;
     width: 318px;
     min-width: 256px;
-    text-align: center;
+    text-align: left;
 }
+
 #body
 {
-    background-color: #FFFFF9;
-    color: black;
+    background-color: #111;
+    color: #FFFFFF;
     width: 100%;
+    min-width: 1280px;
     float: left;
+    min-height: 600px;
+    margin-bottom: -150px; 
 }
+
 #wrapper
 {
-    color: black;
+    color: #ffffff;
     margin-left: auto;
     margin-right: auto;
     min-width: 1024px;
     width: 1280px;
+
 }
+
 #wrapperContent
 {
     float: left;
-    width: 959px;
-    min-width: 767px; 
+    width: 960px;
+    min-width: 768px;
 }
+
 #content
 {
-    border-right: 1px solid #CDCDCD;
     padding-top: 20px;
+    width: 100%;
+}
+.push, .footer
+{
+    height: 150px;
+    clear: both;
 }
 #footer
 {
-    border-top: #444 solid 1px;
+    border-top: #04acec solid 1px;
     color: white;
+    background-color: black;
     float: left;
-    height: 150px;
     margin-top: 100px;
     text-align: center;
-    width: 100%;
+    min-width: 100%;
 }
 
 #footer dl, #footer div dd, #footer dl dt
@@ -335,35 +371,13 @@ html, body
     margin-right: auto;
     width: 960px;
 }
-
-.projectDiv
+#something
 {
-    background: url("/Content/images/dgrey037.jpg") repeat transparent;
-    border: 2px #04acec solid;
-    border-radius: 10px;
+    margin-top: 30px;
+    border-top: #cdcdcd solid 1px;
     float: left;
-    margin: 20px 0 40px;
-    width: 956px;
-}
-
-li.projectList
-{
-    display: inline;
-    float: left;
-    margin: 20px 13px;
-    text-align: center;
-}
-
-img.projectList
-{
-    border: 2px white solid;
-    border-radius: 10px;
-}
-
-img.projectList:hover
-{
-    border: 2px #04acec solid;
-    border-radius: 10px;
+    width: 100%;
+    min-width: 500px;
 }
 
 li.noStyle
@@ -433,7 +447,7 @@ textarea
 .input-validation-error
 {
     background-color: #ffeeee;
-    border: 1px solid #ff0000;
+    border: 2px solid #ff0000 !important;
 }
 
 .validation-summary-errors
@@ -449,15 +463,17 @@ textarea
 
 h1, h2, h3
 {
-    color: black;
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #9c9c9c;
+    font-size: 20pt;
 }
+
 h2
 {
-    font-family:"Century Gothic", Times, serif;
+    /*font-family:"Century Gothic", Times, serif;*/
     font-size: 48px;
     border-bottom: double #CDCDCD 3px;
     margin-bottom: 0;
-
 }
 
 a h3, a h4
@@ -468,4 +484,369 @@ a h3, a h4
 a h3:hover, a h4:hover
 {
     color: #04acec;
+}
+
+div.pager
+{
+    margin: 10px 0;
+    float: left;
+    clear: both;
+}
+
+div.pager a
+{
+    color: white;
+    margin: 10px 3px ;
+    border: 1px solid #04acec;
+    padding: 5px;
+    background-color: black ;
+}
+
+div.pager a:visited
+{
+    color: white;
+    background-color: black ;
+}
+
+div.pager a.selected_paginator
+{
+    color: white ;
+    background-color: #04acec;
+}
+
+div.pager a:hover, .readMore:hover
+{
+    color: #04acec!important;
+    background-color: white !important;
+    font-weight: bolder;
+    border: #04acec 1px solid;
+}
+.readMore
+{
+    background-color: black;
+    color: #04acec; 
+    font-weight: bolder;
+    padding: 5px;
+    border-top: 1px #04acec solid;
+}
+.readMore:hover
+{
+    background-color:  white;
+    border-top: 1px #04acec solid;
+    color: #04acec  !important;
+    font-weight: bolder;
+}
+
+.categoryLink, .tagLink, .categoryLink:visited, .taglink:visited, .postTitle, .postTitle:visited, .readMore, .readMore:visited
+{
+    margin: 0 5px 0 0;
+    color: white;
+    
+}
+.tagLink, .tagLink:visited, .categoryLink, .categoryLink:visited
+{
+    padding: 2px;
+    border: 1px solid #04acec;
+    border-radius: 5px;
+}
+
+ #postListTitle tr td .categoryLink, #postListTitle tr td .tagLink
+{
+    color: white
+}
+
+.latestPostList .postTitle, .latestPostList .postTitle:visited
+{
+    margin: 0 5px 0 0;
+    color: white;
+}
+
+.tagList
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.tagListItem a
+{
+    background-color: black;
+    border: 1px solid #04acec;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    float: left;
+    border-radius: 5px;
+}
+#latestPost
+{
+    clear: both;
+    margin-top: 10px;
+}
+#dateTable, #commentCount
+{
+    text-align: center;
+    width: 100%;
+}
+
+.categoryLink:hover,  .postTitle:hover, .tagLink:hover
+{
+    color: #04acec !important;
+}
+.categoryList .categoryLink
+{
+    background-color: transparent !important;
+    border: none !important;
+}
+.tagLink:hover, .categoryLink:hover
+
+{
+    background-color: white;
+    border: 1px solid #04acec;
+}
+
+.categoryList, .latestPostList
+{
+    list-style-image: url("/Content/images/brackets.png");
+}
+
+.tags .sidebar
+{
+    margin: 15px 0;
+}
+.sidebar
+{
+    margin-left: 10px;
+}
+.latestPostDiv .sidebar
+{
+    padding-top: 15px;
+}
+
+.categoriesDiv, .latestPostsDiv
+{
+    min-height: 200px;
+}
+
+.tags
+{
+    min-height: 125px;
+}
+
+.post
+{
+    float: left;
+    clear: both;
+    margin: 25px 0;
+    width: 100%;
+    padding-bottom: 100px;
+}
+.post-meta
+{
+    width: 100%;
+    float: left;
+    height: 160px;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.leftPostMeta
+{
+    background-color: black;
+    padding-left: 10px;
+    border-top: 3px #04acec solid;
+    color: white;
+    width: 804px;
+    height: 100%;
+    float: left;
+    padding-top: 10px;
+}
+.rightPostMeta
+{
+    background-color: black ;
+    color: white;
+    border-top: 3px #04acec solid;
+    margin-left: 10px;
+    width: 124px;
+    height: 60%;
+    float: left;
+    padding-top: 10px;
+}
+.articleMeta
+{
+    width: 100%;
+    float: left;
+    height: 120px;
+    clear: both;
+    margin-bottom: 20px;
+}
+.leftArticleMeta
+{
+    background-color: black;
+    padding-left: 10px;
+    border-top: 3px #04acec solid;
+    color: white;
+    width: 784px;
+    height: 100%;
+    float: left;
+    padding-top: 10px;
+}
+.rightArticleMeta
+{
+    background-color: black ;
+    color: white;
+    border-top: 3px #04acec solid;
+    margin-left: 10px;
+    width: 144px;
+    height: 50%;
+    float: left;
+    padding-top: 10px;
+}
+.postTimeStamp
+{
+    float: right;
+}
+.titleTagList
+{
+    list-style: none;
+}
+.titleTagList li
+{
+    display: inline;
+}
+.post-body, .post-foot
+{
+    margin-left:10px;
+    margin-right: 10px;
+    float: left;
+    width: 95%;
+    clear: both;
+    margin-bottom: 25px;
+}
+#postListTitle th
+{
+    padding: 0;
+    text-align: left;
+    font-size: 32pt;
+}
+#portfolioCategoriesRight
+{
+    width: 192px;
+    float: left;
+    min-height: 500px;
+    border-left: solid 1px #04acec;
+}
+#portfolioProjectsLeft
+{
+    width: 758px;
+    float: left;
+    min-height: 500px;
+}
+.projectCategoryList
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.projectCategoryLink
+{
+    color: white;
+    float: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 181px;
+    height: 40px;
+    border-bottom: 1px solid #04acec;
+    margin-left: 10px;
+}
+.projectCategoryLink a, .projectCategoryLink a:visited
+{
+    margin-top: 15px;
+    color: white;
+    margin-left: 10px;
+}
+.projectCategoryLink:hover
+{
+    color: #04acec !important;
+    background-color: white !important;
+}
+h4
+{
+    color: #CDCDCD;
+    text-align: center;
+}
+#projectList
+{
+    list-style: none;
+}
+.projectListItem 
+{
+    width: 216px;
+    float: left;
+    margin: 30px 12px;
+}
+#projectListElements
+{
+    list-style: none;
+}
+#projectList, #projectListElements, .projectThumbnail, .projectName
+{
+    padding: 0;
+    margin: 0;
+}
+.projectThumbnail a img
+{
+    border: 8px solid #04acec;
+}
+.selectedProjectCategory
+{
+    background-color: black;
+    color: #04acec !important;
+}
+.projectName
+{
+    text-align: center
+}
+#contactFormTable
+{
+    width: 100%;
+}
+#contactFormTable tr td
+{
+    height: 40px;
+    margin: 0 5px;
+    float: left;
+}
+#contactFormTable tr td.alignRight
+{
+    text-align: right;
+    width: 268px;
+    
+}
+#contactFormTable tr td.alignLeft
+{
+    text-align: left;
+    width: 652px;
+}
+input.contactForm, textarea
+{
+    width: 330px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: solid 1px black;
+    padding: 5px;
+    resize: none;
+}
+#submitContactButton
+{
+    padding: 10px 129px;
+    margin-left: 290px;
+    font-size: 20pt;
+    background-color: black;
+    color: #04acec; 
+    font-weight: bolder;
+    border-top: 1px #04acec solid;
+}
+#submitContactButton:hover
+{
+    background-color: white;
 }

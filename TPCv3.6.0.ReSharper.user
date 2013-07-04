@@ -1,0 +1,290 @@
+<Configuration>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/d:fancybox/d:source/f:jquery.fancybox.pack.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery-1.8.3-vsdoc.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery-1.8.3.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery-1.8.3.min.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery-ui-1.9.2.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery-ui-1.9.2.min.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.lightbox-0.5.min.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.unobtrusive-ajax.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.unobtrusive-ajax.min.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.validate-vsdoc.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.validate.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.validate.min.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.validate.unobtrusive.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:jquery.validate.unobtrusive.min.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:MicrosoftAjax.debug.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:MicrosoftAjax.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:MicrosoftMvcAjax.debug.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:MicrosoftMvcAjax.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:MicrosoftMvcValidation.debug.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:MicrosoftMvcValidation.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Scripts/f:modernizr-2.6.2.js" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/f:Web.config" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/f:Web.config" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/f:Web.Debug.config" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/f:Web.Release.config" caret="0" fromTop="0" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Index.cshtml" caret="47" fromTop="1" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Shared/f:_Layout.cshtml" caret="3035" fromTop="8" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Controllers/f:HomeController.cs" caret="462" fromTop="20" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="564" fromTop="12" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="5333" fromTop="63" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="2397" fromTop="23" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="5403" fromTop="21" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="6278" fromTop="12" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="2608" fromTop="12" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="92" fromTop="3" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Index.cshtml" caret="47" fromTop="1" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Controllers/f:HomeController.cs" caret="329" fromTop="11" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Controllers/f:HomeController.cs" caret="560" fromTop="21" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Controllers/f:HomeController.cs" caret="687" fromTop="18" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Controllers/f:HomeController.cs" caret="249" fromTop="13" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="5252" fromTop="13" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="5252" fromTop="17" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Shared/f:_Layout.cshtml" caret="3035" fromTop="8" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="4817" fromTop="18" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="4411" fromTop="10" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="2331" fromTop="14" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="1759" fromTop="17" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="2299" fromTop="7" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="3959" fromTop="6" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="289" fromTop="9" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="2571" fromTop="5" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="5369" fromTop="21" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="4921" fromTop="14" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="5190" fromTop="16" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Content/f:Site.css" caret="5333" fromTop="26" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="1093" fromTop="9" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="1379" fromTop="13" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="4268" fromTop="12" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="2886" fromTop="14" />
+      <File id="9BD9C583-67D7-4CC5-BE26-CE88C3A9462A/d:Views/d:Home/f:Projects.cshtml" caret="564" fromTop="12" />
+    </RecentEdits>
+  </RecentFiles>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="HtmlCodeCompletionContext">
+      <Item value="id" priority="71" />
+      <Item value="header" priority="11" />
+      <Item value="div" priority="47" />
+      <Item value="ul" priority="38" />
+      <Item value="li" priority="30" />
+      <Item value="img" priority="11" />
+      <Item value="src" priority="11" />
+      <Item value="." priority="5" />
+      <Item value=".." priority="17" />
+      <Item value="Content" priority="5" />
+      <Item value="images" priority="5" />
+      <Item value="banner.jpg" priority="6" />
+      <Item value="alt" priority="12" />
+      <Item value="p" priority="5" />
+      <Item value="content" priority="5" />
+      <Item value="script" priority="5" />
+      <Item value="type" priority="5" />
+      <Item value="text/javascript" priority="5" />
+      <Item value="a" priority="11" />
+      <Item value="class" priority="48" />
+      <Item value="fancybox" priority="12" />
+      <Item value="rel" priority="6" />
+      <Item value="if" priority="9" />
+      <Item value="projectDiv" priority="5" />
+      <Item value="style" priority="5" />
+      <Item value="border-radius" priority="6" />
+      <Item value="noStyle" priority="23" />
+      <Item value="projectList" priority="5" />
+      <Item value="href" priority="5" />
+      <Item value="h1" priority="11" />
+      <Item value="br" priority="12" />
+      <Item value="target" priority="11" />
+    </ItemStatistics>
+    <ItemStatistics item="CssCodeCompletionContext">
+      <Item value="width" priority="41" />
+      <Item value="margin" priority="29" />
+      <Item value="margin-right" priority="17" />
+      <Item value="auto" priority="13" />
+      <Item value="headerLeft" priority="9" />
+      <Item value="float" priority="23" />
+      <Item value="headerRight" priority="4" />
+      <Item value="min-height" priority="17" />
+      <Item value="html" priority="5" />
+      <Item value="body" priority="5" />
+      <Item value="padding" priority="5" />
+      <Item value="background" priority="17" />
+      <Item value="repeat" priority="6" />
+      <Item value="wrapper" priority="4" />
+      <Item value="text-align" priority="17" />
+      <Item value="color" priority="23" />
+      <Item value="margin-top" priority="11" />
+      <Item value="head" priority="5" />
+      <Item value="img" priority="17" />
+      <Item value="border-bottom" priority="5" />
+      <Item value="footer" priority="4" />
+      <Item value="footerWrapper" priority="4" />
+      <Item value="margin-left" priority="5" />
+      <Item value="h1" priority="5" />
+      <Item value="h2" priority="5" />
+      <Item value="h3" priority="5" />
+      <Item value="fancybox" priority="4" />
+      <Item value="border-radius" priority="12" />
+      <Item value="background-repeat" priority="5" />
+      <Item value="projectList" priority="9" />
+      <Item value="display" priority="5" />
+      <Item value="li" priority="11" />
+      <Item value="border" priority="17" />
+      <Item value="list-style" priority="5" />
+      <Item value="hover" priority="4" />
+      <Item value="transparent" priority="6" />
+      <Item value="a" priority="11" />
+      <Item value="centerText" priority="4" />
+      <Item value="font-stretch" priority="5" />
+      <Item value="text-decoration" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="CSharpCodeCompletionContext">
+      <Item value="using" priority="95" />
+      <Item value="var" priority="414" />
+      <Item value="new" priority="126" />
+      <Item value="TPCEntities" priority="87" />
+      <Item value="db" priority="223" />
+      <Item value="allProjects" priority="31" />
+      <Item value="PENDINGPROJECT`0" priority="31" />
+      <Item value="Url" priority="211" />
+      <Item value="foreach" priority="89" />
+      <Item value="in" priority="95" />
+      <Item value="TPCv3" priority="63" />
+      <Item value="Models" priority="53" />
+      <Item value="Model" priority="317" />
+      <Item value="model" priority="31" />
+      <Item value="p" priority="497" />
+      <Item value="IEnumerable" priority="93" />
+      <Item value="PROJECT`0" priority="26" />
+      <Item value="item" priority="29" />
+      <Item value="public" priority="127" />
+      <Item value="ActionResult`0" priority="127" />
+      <Item value="return" priority="159" />
+      <Item value="View`0" priority="127" />
+      <Item value="Home" priority="65" />
+      <Item value="null" priority="223" />
+      <Item value="Project`0" priority="27" />
+      <Item value="Html" priority="151" />
+      <Item value="HttpCacheVaryByHeaders`0" priority="31" />
+      <Item value="helper" priority="29" />
+      <Item value="this" priority="31" />
+      <Item value="HtmlHelper" priority="28" />
+      <Item value="ImageLinkHelper`0" priority="31" />
+      <Item value="HelperPage`0" priority="31" />
+      <Item value="static" priority="30" />
+      <Item value="NullReferenceException`0" priority="31" />
+      <Item value="from" priority="31" />
+      <Item value="select" priority="63" />
+      <Item value="where" priority="31" />
+      <Item value="i" priority="127" />
+      <Item value="true" priority="63" />
+      <Item value="demos" priority="31" />
+      <Item value="_AppDomain`0" priority="31" />
+      <Item value="uint" priority="29" />
+      <Item value="PageHandlerFactory`0" priority="29" />
+      <Item value="if" priority="153" />
+      <Item value="webProjects" priority="95" />
+      <Item value="else" priority="95" />
+      <Item value="desktopProjects" priority="63" />
+      <Item value="params" priority="31" />
+      <Item value="otherProjects" priority="31" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TPCv3.Models.TPCEntities">
+      <Item value="ToString`0" priority="26" />
+      <Item value="COMPLETEDPROJECTS" priority="54" />
+      <Item value="PENDINGPROJECTS" priority="80" />
+      <Item value="PROJECTS" priority="215" />
+      <Item value="Projects" priority="80" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Entity.DbSet`1">
+      <Item value="ToList`1" priority="269" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="26" />
+      <Item value="Count" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="RazorTransitionCompletionContext">
+      <Item value="Url" priority="51" />
+      <Item value="foreach" priority="25" />
+      <Item value="p" priority="61" />
+      <Item value="item" priority="7" />
+      <Item value="Html" priority="35" />
+      <Item value="helper" priority="9" />
+      <Item value="uint" priority="7" />
+      <Item value="PageHandlerFactory`0" priority="7" />
+      <Item value="if" priority="17" />
+      <Item value="IEnumerable" priority="9" />
+      <Item value="Model" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.UrlHelper">
+      <Item value="Content`0" priority="165" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TPCv3.Models.PROJECT">
+      <Item value="name" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="ToList`1" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TPCv3.Models.Project">
+      <Item value="Name" priority="82" />
+      <Item value="IsDemo" priority="108" />
+      <Item value="Category" priority="80" />
+      <Item value="ThumbUrl" priority="26" />
+      <Item value="ImageUrl" priority="26" />
+      <Item value="Description" priority="27" />
+      <Item value="nguid" priority="27" />
+      <Item value="ProjectId" priority="81" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TPCv3.Helpers.ImageLinkHelper">
+      <Item value="ImageLink`0" priority="27" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.Mvc.HtmlHelper`1">
+      <Item value="ActionLink`0" priority="26" />
+      <Item value="ImageLink`0" priority="53" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="Equals`0" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToList`1" priority="26" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContext">
+      <Item value="$" priority="19" />
+      <Item value="document" priority="10" />
+      <Item value="function" priority="10" />
+    </ItemStatistics>
+    <ItemStatistics item="JavaScriptSpecificContextQualified">
+      <Item value="ready" priority="9" />
+      <Item value="fancybox" priority="9" />
+      <Item value="lightBox" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Select`2" priority="26" />
+      <Item value="Where`1" priority="81" />
+      <Item value="ToList`1" priority="54" />
+      <Item value="OrderBy`2" priority="27" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+</Configuration>

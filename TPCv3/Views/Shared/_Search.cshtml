@@ -2,9 +2,11 @@
     @using (Html.BeginForm(
 
     "Search",   //Action
-    "Blog",     //Controller
-    FormMethod.Get, //Method
-    new{ id = "search-form"}))  
+    "Blog",     //Controller//Method
+    FormMethod.Post, new Dictionary<string, object>
+                                                         {
+                                                             {"id" , "search-form"}
+                                                         }) ) 
     {
         <p>
             Search Blog: 
@@ -14,6 +16,7 @@
         </p>
         <p>
             <input type="submit" value="Search"/>
+            @Html.Hidden("searchPage", 1)
         </p>
     }
 </div>

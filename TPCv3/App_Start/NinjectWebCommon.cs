@@ -1,5 +1,8 @@
+using System.Web.Mvc;
 using TPCv3.Domain.Abstract;
 using TPCv3.Domain.Concrete;
+using TPCv3.Domain.Entities;
+using TPCv3.Helpers;
 using TPCv3.Providers;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof (TPCv3.App_Start.NinjectWebCommon), "Start")]
@@ -21,6 +24,7 @@ namespace TPCv3.App_Start{
         public static void Start(){
             DynamicModuleUtility.RegisterModule(typeof (OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof (NinjectHttpModule));
+
             bootstrapper.Initialize(CreateKernel);
         }
 
@@ -42,6 +46,7 @@ namespace TPCv3.App_Start{
             kernel.Bind<IBlogRepository>().To<EfBlogRepository>();
             kernel.Bind<IProjectRepository>().To<EfProjectRepository>();
             kernel.Bind<IAuthProvider>().To<AuthProvider>();
+            ModelBinders.Binders.Add(typeof (Post), new PostModelBinder(kernel));
             RegisterServices(kernel);
             return kernel;
         }

@@ -4,7 +4,7 @@ namespace TPCv3.Domain.Entities{
     public class Project{
         #region Public Properties
 
-        public string Category { get; set; }
+        public virtual ProjectCategory Category { get; set; }
 
         public string Code { get; set; }
 

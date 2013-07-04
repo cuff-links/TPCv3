@@ -1,16 +1,22 @@
 ﻿@using TPCv3.Helpers
 @model IList<TPCv3.Domain.Entities.Post>
-<div class="sidebar">
-  <h3>Latest Posts</h3>
+<div class="sidebar latestPostDiv">
+  <h3 id="latestPost" style="padding-top:15px;">5 Most Recent Posts</h3>
  
-  @if (Model.Count > 0)
-  {
-    <ul>
-      @foreach (var post in Model)
-      {
-        <li>@Html.PostLink(post)</li>
-      }
-    </ul>
+  @if (Model.Count > 0){
+      <ul class="latestPostList">
+          @if (Model.Count < 5){
+
+              foreach (var post in Model){
+                  <li>@Html.PostLink(post)</li>
+              }
+          }
+          else{
+              for (int i = 0; i < 5; i++){
+              <li>@Html.PostLink(Model.ElementAt(i))</li>
+              }
+          }
+      </ul>
   }
   else
   {

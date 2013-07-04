@@ -49,34 +49,49 @@ namespace TPCv3{
             routes.MapRoute(
                 "Search",
                 //Route Name
-                "Search/Search_For_{txtSearch}/Page_{page}",
+                "Search/{txtSearch}/Page_{searchPage}",
                 //URL with Parameters
-                new {controller = "Blog", action = "Search", page = 1} //Parameter defaults
+                new {controller = "Blog", action = "Search", searchPage = 1}
+                //Parameter defaults
                 );
-
             routes.MapRoute(
                 "Posts",
                 //Route Name
-                "Posts/{category}/Page_{page}",
+                "Posts/{category}/Page_{blogPage}",
                 //URL with Parametersa
-                new {controller = "Blog", action = "List", category = "All", page = 1}
+                new {controller = "Blog", action = "List", category = "All", blogPage = 1}
                 //Parameter defaults
                 );
-
+            routes.MapRoute(
+                "Portfolio",
+                //Route Name
+                "Portfolio/{category}/Page_{portfolioPage}",
+                //URL with Parametersa
+                new {controller = "Home", action = "Portfolio", category = "All", portfolioPage = 1}
+                //Parameter defaults
+                );
+            routes.MapRoute(
+                "ProjectCategory",
+                //Route Name
+                "ProjectCategory/{selectedProjectCategory}/Page_{projectCategoryPage}",
+                //URL with Parameters
+                new {controller = "Home", action = "ProjectCategory", projectCategoryPage = 1}
+                //Parameter defaults
+                );
             routes.MapRoute(
                 "Category",
                 //Route Name
-                "Category/{category}/Page_{page}",
+                "Category/{selectedCategory}/Page_{categoryPage}",
                 //URL with Parameters
-                new {controller = "Blog", action = "Category", page = 1}
+                new {controller = "Blog", action = "Category", categoryPage = 1}
                 //Parameter defaults
                 );
             routes.MapRoute(
                 "Tag",
                 //Route Name
-                "Tag/{tag}/Page_{page}",
+                "Tag/{tag}/Page_{tagPage}",
                 //URL with parameters
-                new {controller = "Blog", action = "Tag", page = 1});
+                new {controller = "Blog", action = "Tag", tagPage = 1});
             routes.MapRoute(
                 "Default",
                 // Route name

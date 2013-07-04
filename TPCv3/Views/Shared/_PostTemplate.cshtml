@@ -3,39 +3,44 @@
 
 <div class="post">
     <div class="post-meta">
-        <div class="row">
- 
-            <!--Heading-->
-            <div class="post-title">
-                <h3>@Html.PostLink(Model)</h3>
-            </div>
- 
+        <div class="leftPostMeta">
+            <table id="postListTitle">
+                <tr>
+                    <th>@Html.PostLink(Model)</th>
+                </tr>
+                <tr>
+                    <td>in @Html.CategoryLink(Model.Category) with tags: @Helpers.Tags(Html, Model.Tags.ToList())</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="postTitle" href="@string.Format("{0}#disqus_thread", Model.Href(Url))"></a> for this discussion.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Partial("_AddThisPostTemplate")
+                    </td>
+                </tr>
+            </table>
         </div>
- 
-        <div class="row">
- 
-            <!--Category-->
-            <div class="post-category">
-                <span>Category: </span>@Html.CategoryLink(Model.Category)
-            </div>
- 
-            <!--Tags-->
-            <div class="post-tags">
-                <span>Tags:</span>@Helpers.Tags(Html, Model.Tags.ToList())
-            </div>
- 
-            <!--Posted date-->
-            <div class="posted-date">
-                @Model.PostedOn.ToConfigLocalTime()
-            </div>
- 
+        <div class="rightPostMeta">
+            <table id="dateTable">
+                <tr>
+                    <th>@Html.GetMonthName(Model.PostedOn.Month)</th>
+                </tr>
+                <tr>
+                    <td>@Model.PostedOn.Day</td>
+                </tr>
+                <tr>
+                    <td>@Model.PostedOn.Year</td>
+                </tr>
+            </table>
         </div>
- 
     </div>
- 
+
     <!--Short Description-->
     <div class="post-body">
-        @Model.Description
+        @Html.Raw(Model.ShortDescription)
     </div>
  
     <div class="post-foot">
@@ -46,7 +51,12 @@
                                  month = Model.PostedOn.Month,
                                  title = Model.UrlSlug
                              },
-                         new {title = "Read the full article: " + Model.Title}
+                         new
+                             {
+                                 title = "Read the full article: " + Model.Title,
+                                 @class = "readMore"
+                             }
              )
     </div>
+    
 </div>

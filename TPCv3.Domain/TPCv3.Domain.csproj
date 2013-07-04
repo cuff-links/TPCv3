@@ -53,9 +53,12 @@
     <Compile Include="Concrete\EfBlogRepository.cs" />
     <Compile Include="Concrete\EfDbContext.cs" />
     <Compile Include="Concrete\EfProjectRepository.cs" />
+    <Compile Include="Concrete\MyModelDbContextSingleton.cs" />
     <Compile Include="Entities\Category.cs" />
+    <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Project.cs" />
     <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\ProjectCategory.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

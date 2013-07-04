@@ -1,0 +1,13 @@
+﻿@model TPCv3.Models.PortfolioSideBarViewModel
+<h4>PROJECT TYPES</h4>
+<ul class="projectCategoryList">
+    @if(Model.Categories.Any()){
+        foreach(var category in Model.Categories)
+        {
+            <li>@Html.Partial("_PortfolioMenu", category)</li>
+        }
+    }
+    else{
+        <li>No Projects Categories Found!</li>
+    }
+</ul>

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-
 using TPCv3.Domain.Entities;
 
 namespace TPCv3.Domain.Abstract{
@@ -15,11 +14,33 @@ namespace TPCv3.Domain.Abstract{
 
         int AddPost(Post post);
 
+        int AddTag(Tag tag);
+
+        int AddCategory(Category category);
+
+        void EditCategory(Category category);
+
+        void EditTag(Tag tag);
+
+        void EditPost(Post post);
+
+        void DeletePost(int id);
+
+        void DeleteTag(int id);
+
+        void DeleteCategory(int id);
+
+        Category Category(int id);
+
+        Tag Tag(int id);
+
         IList<Category> Categories();
 
         Category Category(string categorySlug);
 
         Post Post(int year, int month, string titleSlug);
+
+        Post PostForId(int id);
 
         IQueryable<Post> Posts(int pagesToSkip, int pageSize);
 

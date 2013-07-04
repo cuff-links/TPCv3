@@ -14,6 +14,8 @@ namespace TPCv3.Models{
 
         public string CurrentTag { get; set; }
 
+        public string CurrentSearchString { get; set; }
+
         public int TotalPages{
             get { return (int) Math.Ceiling((decimal) TotalItems/ItemsPerPage); }
         }

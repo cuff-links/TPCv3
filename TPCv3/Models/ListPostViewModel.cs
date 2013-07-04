@@ -6,64 +6,65 @@ namespace TPCv3.Models{
     public class ListPostViewModel{
         #region Constants and Fields
 
+        private const int itemsPerPage = 2;
         private readonly IBlogRepository _blogRepository;
-
-        private int itemsPerPage = 10;
 
         #endregion
 
         #region Constructors and Destructors
 
         public ListPostViewModel(IBlogRepository blogRepository, int pageNo){
-            this._blogRepository = blogRepository;
-            this.Posts = this._blogRepository.Posts(pageNo - 1, this.itemsPerPage);
-            this.TotalPosts = this._blogRepository.TotalPosts();
-            this.PagingInfo = new PagingInfo
-                                  {CurrentPage = pageNo, ItemsPerPage = this.itemsPerPage, TotalItems = this.TotalPosts};
+            _blogRepository = blogRepository;
+            Posts = _blogRepository.Posts(pageNo - 1, itemsPerPage);
+            TotalPosts = _blogRepository.TotalPosts();
+            PagingInfo = new PagingInfo
+                             {CurrentPage = pageNo, ItemsPerPage = itemsPerPage, TotalItems = TotalPosts};
         }
 
         public ListPostViewModel(IBlogRepository blogRepository, string text, string type, int pageNo){
-            this._blogRepository = blogRepository;
-            switch (type){
+            _blogRepository = blogRepository;
+            switch (type)
+            {
                 case "Category":
                     {
-                        this.Posts = this._blogRepository.PostsForCategory(text, pageNo - 1, this.itemsPerPage);
-                        this.TotalPosts = this._blogRepository.TotalPostsForCategory(text);
-                        this.Category = this._blogRepository.Category(text);
-                        this.PagingInfo = new PagingInfo
-                                              {
-                                                  CurrentPage = pageNo,
-                                                  ItemsPerPage = this.itemsPerPage,
-                                                  TotalItems = this.TotalPosts,
-                                                  CurrentCategory = text
-                                              };
-                        break;
-                    }
-                case "Tag":
-                    {
-                        this.Posts = this._blogRepository.PostsForTags(text, pageNo - 1, this.itemsPerPage);
-                        this.TotalPosts = this._blogRepository.TotalPostsForTag(text);
-                        this.Tag = this._blogRepository.Tag(text);
-                        CurrentTag = Tag.Name;
-                        this.PagingInfo = new PagingInfo
-                                              {
-                                                  CurrentPage = pageNo,
-                                                  ItemsPerPage = this.itemsPerPage,
-                                                  TotalItems = this.TotalPosts,
-                                                  CurrentTag = text
-                                              };
-                        break;
-                    }
-                default:
-                    {
-                        Posts = _blogRepository.PostsForSearch(text, pageNo - 1, itemsPerPage);
-                        TotalPosts = _blogRepository.TotalPostsForSearch(text);
+                        Posts = _blogRepository.PostsForCategory(text, pageNo - 1, itemsPerPage);
+                        TotalPosts = _blogRepository.TotalPostsForCategory(text);
+                        Category = _blogRepository.Category(text);
                         PagingInfo = new PagingInfo
                                          {
                                              CurrentPage = pageNo,
                                              ItemsPerPage = itemsPerPage,
                                              TotalItems = TotalPosts,
                                              CurrentCategory = text
+                                         };
+                        break;
+                    }
+                case "Tag":
+                    {
+                        Posts = _blogRepository.PostsForTags(text, pageNo - 1, itemsPerPage);
+                        TotalPosts = _blogRepository.TotalPostsForTag(text);
+                        Tag = _blogRepository.Tag(text);
+                        CurrentTag = Tag.Name;
+                        PagingInfo = new PagingInfo
+                                         {
+                                             CurrentPage = pageNo,
+                                             ItemsPerPage = itemsPerPage,
+                                             TotalItems = TotalPosts,
+                                             CurrentTag = text
+                                         };
+                        break;
+                    }
+                default:
+                    {
+                        Posts = _blogRepository.PostsForSearch(text, pageNo - 1, itemsPerPage);
+                        TotalPosts = _blogRepository.TotalPostsForSearch(text);
+                        CurrentSearchString = text;
+                        PagingInfo = new PagingInfo
+                                         {
+                                             CurrentPage = pageNo,
+                                             ItemsPerPage = itemsPerPage,
+                                             TotalItems = TotalPosts,
+                                             CurrentSearchString = text
                                          };
                         break;
                     }
@@ -80,9 +81,11 @@ namespace TPCv3.Models{
 
         public string CurrentTag { get; set; }
 
+        public string CurrentSearchString { get; set; }
+
         public PagingInfo PagingInfo { get; private set; }
 
-        public IQueryable<Post> Posts { get; private set; }
+        public IQueryable<Post> Posts { get; set; }
 
         public Tag Tag { get; private set; }
 

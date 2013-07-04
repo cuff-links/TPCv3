@@ -1,15 +1,47 @@
-﻿@{
-    ViewBag.Title = "Portfolio";
+﻿@using TPCv3.Domain.Entities
+@using TPCv3.Helpers
+@model TPCv3.Models.ProjectsListViewModel
+@{
+    ViewBag.Title = "The Power Coder | Portfolio";
 }
 
-<h2>Portfolio</h2>
+@if(Model.CurrentCategory == null)
+{
+    <h2>Portfolio | All Projects</h2>
+}
+else
+{
+    <h2>Portfolio | @Model.CurrentCategory Projects</h2>
+}
+
+@if(ViewBag.Caption != null)
+{
+    <h4>@ViewBag.Caption</h4>
+}
 
 <div id="content">
-    fdadfjkjksdfljsdgkl;sgjklsg;jsdklsdga
-    sdfjkjsdgkl;jkl;jkl;jkl;sdfjkl;jsdfkla
-    sdhjklsdgjkl;jsdgkl;sdfjkl;sdfjsdfkl;sdfj
-    s<br /> <br/>
-    fhjhfasklhdfjkl;shdfjklsdfjkl;sdf
-    [sdfhjklsdfhjjsdfkl'sdfjkl;sdfjsdfkl;sdf
-    [sdfhjsdfjkl;jkl;jkl;jklawdg;jkl;
+    <div id="portfolioProjectsLeft">
+        <div id="listOfProjects">
+    <ul id="projectList">
+        @if (Model.Projects.Any())
+        {
+            foreach (Project project in Model.Projects)
+            {
+                <li class="projectListItem">@Html.Partial("_ProjectTemplate", project)</li>
+            }
+        }
+        else
+        {
+            <li>No projects found!</li>
+        }
+    </ul>
+</div>
+        
+        <div class="pager">
+            @(Model.CurrentCategory != null ? Html.PageLinks(Model.PagingInfo, x => Url.Action("ProjectCategory", new {projectCategoryPage = x})) : Html.PageLinks(Model.PagingInfo, x => Url.Action("Portfolio", new {portfolioPage = x})))
+        </div>
+    </div>
+    <div id="portfolioCategoriesRight">
+        @Html.Action("PortfolioSideBar", "Home")
+    </div>
 </div>

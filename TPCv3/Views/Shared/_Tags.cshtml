@@ -2,17 +2,18 @@
 @model IList<TPCv3.Domain.Entities.Tag>
            
 <div class="tags sidebar">
-  <h3>Tags</h3>
- 
-  @if (Model.Count > 0)
-  {
-    foreach (var tag in Model)
+    <h3>Specific Subjects</h3>
+    <ul class="tagList">
+    @if (Model.Count > 0)
     {
-      @Html.TagLink(tag)
+        foreach (var tag in Model)
+        {
+            <li class="tagListItem">@Html.TagLink(tag)</li>
+        }
     }
-  }
-  else
-  {
-    <p>No tags found!</p>
-  }
+    else
+    {
+        <li>No tags found!</li>
+    }
+    </ul>
 </div>

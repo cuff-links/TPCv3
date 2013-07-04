@@ -6,18 +6,31 @@ namespace TPCv3.Models{
     public class ProjectsListViewModel{
         #region Public Properties
 
-        private const int ItemsPerPage = 9;
-        private readonly IProjectRepository _repository;
+        private readonly IProjectRepository _projectRepository;
 
-        public ProjectsListViewModel(IProjectRepository repository, int pageNo){
-            _repository = repository;
-            Projects = _repository.Projects(pageNo - 1, ItemsPerPage);
-            TotalProjects = _repository.TotalProjects();
+        public ProjectsListViewModel(IProjectRepository projectRepository, int pageNo, int itemsPerPage){
+            _projectRepository = projectRepository;
+            Projects = _projectRepository.Projects(pageNo - 1, itemsPerPage);
+            TotalProjects = _projectRepository.TotalProjects();
             PagingInfo = new PagingInfo
                              {
                                  CurrentPage = pageNo,
-                                 ItemsPerPage = ItemsPerPage,
+                                 ItemsPerPage = itemsPerPage,
                                  TotalItems = TotalProjects
+                             };
+        }
+
+        public ProjectsListViewModel(IProjectRepository projectRepository, string category, int pageNo, int itemsPerPage){
+            _projectRepository = projectRepository;
+            Projects = _projectRepository.ProjectsForCategory(category, pageNo - 1, itemsPerPage);
+            TotalProjects = _projectRepository.TotalProjectsForCategory(category);
+            CurrentCategory = category;
+            PagingInfo = new PagingInfo
+                             {
+                                 CurrentPage = pageNo,
+                                 ItemsPerPage = itemsPerPage,
+                                 TotalItems = TotalProjects,
+                                 CurrentCategory = category
                              };
         }
 

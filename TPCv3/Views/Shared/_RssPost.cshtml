@@ -1,0 +1,11 @@
+﻿@model TPCv3.Domain.Entities.Post
+@using System.Configuration
+@using TPCv3.Helpers
+<item>
+    <title>@(Model.Title)</title>
+    <link>@(ConfigurationManager.AppSettings["BlogUrl"] + Url.Action("Post", new RouteValueDictionary(new {month = Model.PostedOn.Month, year = Model.PostedOn.Year, title = Model.UrlSlug })))</link>
+    <guid>@(ConfigurationManager.AppSettings["BlogUrl"] + Url.Action("Post", new RouteValueDictionary(new { month = Model.PostedOn.Month, year = Model.PostedOn.Year, title = Model.UrlSlug })))</guid>
+    <pubDate>@Model.PostedOn.ToConfigLocalTime()</pubDate>
+    <description>@(Model.Description)</description>
+</item>
+
