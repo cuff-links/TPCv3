@@ -36,21 +36,9 @@
                 </div>
                 <div id="headerRight">
                     <ul id="menu">
-                        <li>
-                            @Html.ActionLink("Home", "Index", "Home")
-                        </li>
-<<<<<<< HEAD
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li><a href="/Portfolio/All/Page_1">Portfolio</a></li>
                         <li><a href="/Posts/All/Page_1">The Power Blog</a></li>
-=======
-                        <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")
-                            <ul>
-                                <li>@Html.ActionLink("Web Projects", "Portfolio", "Home", null, null, "webApps", null, null)</li>
-                                <li>@Html.ActionLink("Desktop Projects", "Portfolio", "Home", null, null, "deskApps", null, null)</li>
-                                <li>@Html.ActionLink("Other Projects", "Portfolio", "Home", null, null, "otherApps", null, null)</li>
-                            </ul>
-                        <li>@Html.ActionLink("The Power Blog", "List", "Blog" , new {Page = 1}, null)
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
                         <li><a href="#">About</a></li>
                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     </ul>
@@ -64,7 +52,7 @@
                         <a href="http://feeds.feedburner.com/feed" title="Subscribe to my blog" >Subscribe to my blog</a>
                     </div>
                     @Html.Partial("_Search")
-                    @Html.Action("SideBars", "Blog")
+                   @Html.Action("SideBars", "Blog")
                 </div>
                 <div id="wrapperContent">
                     @RenderBody()
@@ -74,6 +62,7 @@
         </div>
         <div id="footer" class="footer">
             <div id="footerWrapper">
+                
                 <dl>
                     <dt>@Html.ActionLink("Home", "Index", "Home")</dt>
                 </dl>
