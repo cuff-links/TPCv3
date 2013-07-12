@@ -16,7 +16,7 @@
     margin: 0;
     margin-top: 150px;
     padding: 10px 0 0 0;
-    width: 100%;
+    width: 80%;
 }
 
 #menu li
@@ -26,30 +26,18 @@
     position: relative;
 }
 
-<<<<<<< HEAD
-    #menu a {
-        color: #999;
-        float: left;
-        font-family: 'Goudy Bookletter 1911', serif;
-        font-size: 12pt;
-        height: 25px;
-        padding: 0 25px;
-        text-decoration: none;
-        -webkit-text-shadow: 0 1px 0 #000;
-        text-shadow: 0 1px 0 #000;
-    }
-=======
-#menu a
+#menu a 
 {
     color: #999;
     float: left;
     font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 12pt;
     height: 25px;
     padding: 0 25px;
     text-decoration: none;
+    -webkit-text-shadow: 0 1px 0 #000;
     text-shadow: 0 1px 0 #000;
 }
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
 
 #menu li:hover > a
 {
@@ -205,51 +193,16 @@ header, footer, nav, section
     display: block;
 }
 
-html, body
-{
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    font-family: 'Josefin Slab', serif;
-<<<<<<< HEAD
-    font-size: 16pt;
-    width: 100%;
-=======
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
-}
-
 #header
 {
     border-bottom: #04acec solid 1px;
-    height: 375px;
+    height: 325px;
     width: 100%;
+    clear: both;
 }
-
-#headerWrapper
+#banner
 {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 1024px;
-    width: 1280px;
-}
-
-#headerLeft
-{
-    float: left;
-    min-width: 384px;
-    width: 480px;
-}
-
-#headerLeft img
-{
-    margin-top: 125px;
-}
-
-#headerRight
-{
-    float: left;
-    min-width: 640px;
-    width: 800px;
+    margin-top: 133px;
 }
 
 #searchDiv
@@ -274,17 +227,6 @@ div.feeddiv a:hover{
     float: right;
 }
 
-#txtSearch
-{
-    width: 120px;
-    border-radius: 5px;
-    border: 3px #000 solid;
-}
-#txtSearch:hover
-{
-    border: 3px #04acec solid;
-}
-
 #search-form p
 {
     display: inline;
@@ -293,23 +235,15 @@ div.feeddiv a:hover{
 #sidebars
 {
     float: right;
-    width: 318px;
-    min-width: 256px;
     text-align: left;
 }
 
 #body
 {
-    background-color: #111;
     color: #FFFFFF;
     width: 100%;
-    min-width: 1280px;
-    float: left;
     min-height: 600px;
-<<<<<<< HEAD
     margin-bottom: -150px; 
-=======
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
 }
 
 #wrapper
@@ -341,17 +275,24 @@ div.feeddiv a:hover{
 }
 #footer
 {
-<<<<<<< HEAD
     border-top: #04acec solid 1px;
-=======
-    border-top: #111 solid 1px;
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
-    color: white;
     background-color: black;
     float: left;
     margin-top: 100px;
     text-align: center;
     min-width: 100%;
+    min-height: 500px;
+}
+.footerTripleColumns
+{
+    float: left;
+    width: 318px;
+    min-height: 300px;
+}
+.middleFooterColumn
+{
+    border-left: #04acec solid 1px;
+    border-right: #04acec solid 1px;
 }
 
 #footer dl, #footer div dd, #footer dl dt
@@ -488,19 +429,13 @@ h1, h2, h3
 {
     font-family: 'Goudy Bookletter 1911', serif;
     color: #9c9c9c;
-<<<<<<< HEAD
     font-size: 20pt;
-=======
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
 }
 
 h2
 {
-<<<<<<< HEAD
     /*font-family:"Century Gothic", Times, serif;*/
-=======
    /*font-family:"Century Gothic", Times, serif;*/
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
     font-size: 48px;
     border-bottom: double #CDCDCD 3px;
     margin-bottom: 0;
@@ -515,7 +450,7 @@ a h3:hover, a h4:hover
 {
     color: #04acec;
 }
-<<<<<<< HEAD
+
 
 div.pager
 {
@@ -530,13 +465,13 @@ div.pager a
     margin: 10px 3px ;
     border: 1px solid #04acec;
     padding: 5px;
-    background-color: black ;
+    background-color: #111 ;
 }
 
 div.pager a:visited
 {
     color: white;
-    background-color: black ;
+    background-color: #111 ;
 }
 
 div.pager a.selected_paginator
@@ -551,6 +486,7 @@ div.pager a:hover, .readMore:hover
     background-color: white !important;
     font-weight: bolder;
     border: #04acec 1px solid;
+    text-decoration: none;
 }
 .readMore
 {
@@ -566,6 +502,7 @@ div.pager a:hover, .readMore:hover
     border-top: 1px #04acec solid;
     color: #04acec  !important;
     font-weight: bolder;
+    text-decoration: none;
 }
 
 .categoryLink, .tagLink, .categoryLink:visited, .taglink:visited, .postTitle, .postTitle:visited, .readMore, .readMore:visited
@@ -597,56 +534,34 @@ div.pager a:hover, .readMore:hover
     list-style: none;
     margin: 0;
     padding: 0;
+    
 }
-.tagListItem a
-{
-    background-color: black;
+.tagListItem a {
+    background-color: #111;
     border: 1px solid #04acec;
     margin: 5px;
     padding: 5px;
     text-align: center;
     float: left;
     border-radius: 5px;
-=======
-div.pager {
-    margin: 10px 0;
-}
-div.pager a 
-{
-    color: white;
-    margin: 10px 3px;
-    padding: 5px;
-}
-div.pager a:visited {
-    color: white;
+    text-decoration: none;
 }
 div.pager a:hover {
-    color: white !important;
-    background-color: #04acec !important;
-}
-div.pager a.selected_paginator {
-    color: white;
-    background-color: #008B00;
-    font-weight: bolder;
+    background-color: white !important;
+    color: #04acec !important;
 }
 .categoryLink , .tagLink, .categoryLink:visited, .taglink:visited
 {
     margin: 0 5px 0 0;
     color: white;
-    text-decoration: underline;
-}
-.tagList
-{
-    float: left;
-    list-style: none;
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
+    text-decoration: none;
 }
 #latestPost
 {
     clear: both;
     margin-top: 10px;
 }
-<<<<<<< HEAD
+
 #dateTable, #commentCount
 {
     text-align: center;
@@ -656,6 +571,7 @@ div.pager a.selected_paginator {
 .categoryLink:hover,  .postTitle:hover, .tagLink:hover
 {
     color: #04acec !important;
+    text-decoration: none;
 }
 .categoryList .categoryLink
 {
@@ -667,6 +583,7 @@ div.pager a.selected_paginator {
 {
     background-color: white;
     border: 1px solid #04acec;
+    text-decoration: none;
 }
 
 .categoryList, .latestPostList
@@ -716,22 +633,20 @@ div.pager a.selected_paginator {
 
 .leftPostMeta
 {
-    background-color: black;
+    background-color: #111;
     padding-left: 10px;
     border-top: 3px #04acec solid;
     color: white;
-    width: 804px;
     height: 100%;
     float: left;
     padding-top: 10px;
 }
 .rightPostMeta
 {
-    background-color: black ;
+    background-color: #111 ;
     color: white;
     border-top: 3px #04acec solid;
     margin-left: 10px;
-    width: 124px;
     height: 60%;
     float: left;
     padding-top: 10px;
@@ -746,22 +661,20 @@ div.pager a.selected_paginator {
 }
 .leftArticleMeta
 {
-    background-color: black;
+    background-color: #111;
     padding-left: 10px;
     border-top: 3px #04acec solid;
     color: white;
-    width: 784px;
     height: 100%;
     float: left;
     padding-top: 10px;
 }
 .rightArticleMeta
 {
-    background-color: black ;
+    background-color: #111 ;
     color: white;
     border-top: 3px #04acec solid;
     margin-left: 10px;
-    width: 144px;
     height: 50%;
     float: left;
     padding-top: 10px;
@@ -814,25 +727,22 @@ div.pager a.selected_paginator {
 }
 .projectCategoryLink
 {
-    color: white;
     float: left;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 10px;
     width: 181px;
     height: 40px;
+    margin-left: 10px;
     border-bottom: 1px solid #04acec;
-    margin-left: 10px;
-}
-.projectCategoryLink a, .projectCategoryLink a:visited
-{
-    margin-top: 15px;
-    color: white;
-    margin-left: 10px;
 }
 .projectCategoryLink:hover
 {
-    color: #04acec !important;
     background-color: white !important;
+    color: #04acec !important;
+}
+.projectCategoryLink , .projectCategoryLink :visited
+{
+    color: white;
 }
 h4
 {
@@ -861,11 +771,6 @@ h4
 .projectThumbnail a img
 {
     border: 8px solid #04acec;
-}
-.selectedProjectCategory
-{
-    background-color: black;
-    color: #04acec !important;
 }
 .projectName
 {
@@ -911,16 +816,10 @@ input.contactForm, textarea
     font-weight: bolder;
     border-top: 1px #04acec solid;
 }
-#submitContactButton:hover
-{
+#submitContactButton:hover {
     background-color: white;
-=======
-.categoryLink:hover , .tagLink:hover
-{
-    color: #04acec;
 }
-.tags .sidebar
+.categoryLink:hover , .tagLink:hover 
 {
-    margin-bottom: 15px;
->>>>>>> 59de76e6a20a87d878d82b2dd67d0cfdbd639233
+    color: #04acec !important;
 }

@@ -1,5 +1,5 @@
 fancyBox - Changelog
-=========
+==
 
 ### Version 2.1.3 - October 23, 2012
 
