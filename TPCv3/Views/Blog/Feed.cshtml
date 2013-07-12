@@ -5,14 +5,14 @@
     Layout = null;
 }
 <rss version="2.0">
-<channel>
-<title>@ConfigurationManager.AppSettings["BlogTitle"]</title>
-<link>@ConfigurationManager.AppSettings["BlogUrl"]</link>
-<description>@ConfigurationManager.AppSettings["BlogDescription"]</description>
-<lastBuildDate>@Model.First().PostedOn.ToUniversalTime().ToString("r")</lastBuildDate>
-<language>en-us</language>
-    @foreach (Post p in Model){
-         @Html.Partial("_RssPost", p)
-     }
-</channel>
+    <channel>
+        <title>@ConfigurationManager.AppSettings["BlogTitle"]</title>
+        <link>@ConfigurationManager.AppSettings["BlogUrl"]</link>
+        <description>@ConfigurationManager.AppSettings["BlogDescription"]</description>
+        <lastBuildDate>@Model.First().PostedOn.ToUniversalTime().ToString("r")</lastBuildDate>
+        <language>en-us</language>
+        @foreach (Post p in Model){
+            @Html.Partial("_RssPost", p)
+        }
+    </channel>
 </rss>

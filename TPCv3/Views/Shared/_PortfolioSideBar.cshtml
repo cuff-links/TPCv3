@@ -3,7 +3,7 @@
 <ul class="projectCategoryList">
     @if(Model.Categories.Any()){
         foreach(var category in Model.Categories){
-                <li class="projectCategoryListItem">
+                <li>
                     @Html.Partial("_PortfolioMenu", category)
                 </li>
             }

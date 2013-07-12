@@ -148,6 +148,10 @@
     <Content Include="App_Data\TPC_log.LDF">
       <DependentUpon>TPC.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\banner.png" />
     <Content Include="Content\images\banner1.png" />
     <Content Include="Content\images\banner2.jpg" />
@@ -159,6 +163,8 @@
     <Content Include="Content\images\Build_Software_White.png" />
     <Content Include="Content\images\Collaborate_White.png" />
     <Content Include="Content\images\dgrey037.jpg" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
     <Content Include="Content\images\Projects\Full\ionsFull.png" />
     <Content Include="Content\images\Projects\Thumbs\ionsThumb.png" />
     <Content Include="Content\images\Test_Software.png" />
@@ -828,6 +834,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="README.jQuery.vsdoc.txt" />
     <Content Include="Scripts\admin.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\common.js" />
     <Content Include="Scripts\fancybox\demo\1_b.jpg" />
     <Content Include="Scripts\fancybox\demo\1_s.jpg" />
@@ -1217,7 +1225,7 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutOld.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="Views\Shared\_PortfolioMenu.cshtml" />
     <Content Include="Views\Shared\_PortfolioSideBar.cshtml" />
@@ -1232,6 +1240,7 @@
     <Content Include="Views\Blog\Feed.cshtml" />
     <Content Include="Views\Shared\_RssPost.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Downloads\Source\SQL.zip" />
@@ -1334,7 +1343,6 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49664</DevelopmentServerPort>
           <DevelopmentServerPort>9688</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>

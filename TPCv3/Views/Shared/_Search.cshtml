@@ -1,4 +1,5 @@
-﻿<div id="searchDiv">
+﻿@using System.Collections
+<div id="searchDiv">
     @using (Html.BeginForm(
 
     "Search",   //Action
@@ -8,15 +9,16 @@
                                                              {"id" , "search-form"}
                                                          }) ) 
     {
-        <p>
-            Search Blog: 
-        </p>
-        <p>
-            @Html.TextBox("txtSearch")
-        </p>
-        <p>
-            <input type="submit" value="Search"/>
-            @Html.Hidden("searchPage", 1)
-        </p>
+        <table>
+            <tr>
+                <td style="padding-top: 10px;">
+                    @Html.TextBox("txtSearch")
+                </td>
+                <td>
+                    <input class="btn" type="submit" value="Search"/>
+                    @Html.Hidden("searchPage", 1) 
+                </td>
+            </tr>
+        </table>
     }
 </div>
