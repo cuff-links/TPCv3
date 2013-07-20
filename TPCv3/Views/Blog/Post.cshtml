@@ -6,38 +6,37 @@
 }
 <h2>The Power Blog | Article</h2>
 <div id="content">
-  <div class="post">
-      <div class="articleMeta">
-          <div class="leftArticleMeta">
-              <table id="postListTitle">
-                  <tr>
-                      <th>@Html.PostLink(Model)</th>
-                  </tr>
-                  <tr>
-                      <td>in @Html.CategoryLink(Model.Category) with tags: @Helpers.Tags(Html, Model.Tags.ToList())</td>
-                  </tr>
-                  <tr>
-                      <td>@Model.PostedOn.ToConfigLocalTime()</td>
-                  </tr>
-              </table>
-          </div>
-          <div class="rightArticleMeta">
-              <table id="commentCount">
-                  
-                  <tr>
-                      <td>
-                          <a class="postTitle" href="@string.Format("{0}#disqus_thread", Model.Href(Url))"></a>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>@Html.Partial("_AddThisArticle")</td>
-                  </tr>
-              </table>
-          </div>
-      </div>
-      <div class="post-body">
-          @Html.Raw(Model.Description)
-      </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="leftArticleMeta span9">
+                <h1>@Html.PostLink(Model)</h1>
+                <table id="postListTitle">
+                    <tr>
+                        <td>in @Html.CategoryLink(Model.Category) with tags: @Helpers.Tags(Html, Model.Tags.ToList())</td>
+                    </tr>
+                    <tr>
+                        <td>@Model.PostedOn.ToConfigLocalTime()</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="span3 rightArticleMeta ">
+                <table id="commentCount">
+                    <tr>
+                        <td>
+                            <a class="postTitle" href="@string.Format("{0}#disqus_thread", Model.Href(Url))"></a>
+                        </td>
+                    </tr>
+                    <tr style="text-align: center">
+                        <td>@Html.Partial("_AddThisArticle")</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div style="margin:20px 5px;" class="span12">
+                @Html.Raw(Model.Description)
+            </div>
+        </div>
+    </div>
      @Html.Partial("_Disqus")
-  </div>
 </div>

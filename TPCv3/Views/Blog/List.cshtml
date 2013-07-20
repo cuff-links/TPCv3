@@ -9,26 +9,20 @@
     <h4>@ViewBag.Caption</h4>
 }
 <div id="content">
- 
-    
- 
-    @if (Model.Posts.Any())
-    {
-        foreach (Post post in Model.Posts)
-        {
-            @Html.Partial("_PostTemplate", post)
+
+        @if (Model.Posts.Any()){
+            foreach (Post post in Model.Posts){
+                @Html.Partial("_PostTemplate", post)
+            }
         }
-    }
-    else
-    {
-        <p>No posts found!</p>
-    }
- 
+        else{
+            <p>No posts found!</p>
+        }
 </div>
-<div class="pager">
+<div class="span1 pager">
         @if (Model.PagingInfo.CurrentTag != null)
         {
-            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Tag", new { tagPage = x}))
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Tag", new { tagPage = x }))
         }
         else if (Model.PagingInfo.CurrentCategory != null)
         {

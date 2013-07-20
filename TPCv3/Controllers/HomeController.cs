@@ -12,7 +12,7 @@ namespace TPCv3.Controllers{
     public class HomeController : Controller{
         #region Constants and Fields
 
-        private const int itemsPerPage = 6;
+        private const int itemsPerPage = 3;
         private readonly IProjectRepository _projectRepository;
 
         #endregion

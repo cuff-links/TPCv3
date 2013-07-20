@@ -6,19 +6,13 @@
     "Blog",     //Controller//Method
     FormMethod.Post, new Dictionary<string, object>
                                                          {
-                                                             {"id" , "search-form"}
+                                                             {"id" , "search-form"},
+                                                             {"class","navsearch pull-left"}
                                                          }) ) 
     {
-        <table>
-            <tr>
-                <td style="padding-top: 10px;">
-                    @Html.TextBox("txtSearch")
-                </td>
-                <td>
-                    <input class="btn" type="submit" value="Search"/>
-                    @Html.Hidden("searchPage", 1) 
-                </td>
-            </tr>
-        </table>
+        @Html.TextBox("txtSearch", null, new Dictionary<string, object>{{"class", "search-query span9"}, {"placeholder", "Search Blog:"}})
+        <input class="btn-mini btn-primary" type="submit" value="Submit"/>
+        @Html.Hidden("searchPage", 1) 
+
     }
 </div>

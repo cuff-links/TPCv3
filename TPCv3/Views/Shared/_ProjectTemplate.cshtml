@@ -1,9 +1,7 @@
 ﻿@model TPCv3.Domain.Entities.Project 
-<ul id="projectListElements">
-    <li class="projectThumbnail">
-        <a>
-            <img src="@Model.ThumbUrl" alt="@Model.Name"/>
-        </a>
-    </li>
-    <li class="projectName">@Model.Name</li>
-</ul>
+
+<div class="thumbnail">
+    <img src="@Model.ThumbUrl" alt="@Model.Name"/>
+    <h3>Thumbnail label</h3>
+    <p>Thumbnail caption...</p>
+</div>

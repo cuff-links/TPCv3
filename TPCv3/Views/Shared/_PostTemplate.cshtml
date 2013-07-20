@@ -1,13 +1,11 @@
 ﻿@using TPCv3.Helpers
 @model TPCv3.Domain.Entities.Post
 
-<div class="post">
-    <div class="post-meta">
-        <div class="leftPostMeta">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span9  leftPostMeta">
+            <h1>@Html.PostLink(Model)</h1>
             <table id="postListTitle">
-                <tr>
-                    <th>@Html.PostLink(Model)</th>
-                </tr>
                 <tr>
                     <td>in @Html.CategoryLink(Model.Category) with tags: @Helpers.Tags(Html, Model.Tags.ToList())</td>
                 </tr>
@@ -23,7 +21,7 @@
                 </tr>
             </table>
         </div>
-        <div class="rightPostMeta">
+        <div class="rightPostMeta span2">
             <table id="dateTable">
                 <tr>
                     <th>@Html.GetMonthName(Model.PostedOn.Month)</th>
@@ -36,27 +34,32 @@
                 </tr>
             </table>
         </div>
+        <!--Short Description-->
+        <div class="row-fluid">
+            <div style="margin: 20px 5px" class="span12">
+                @Html.Raw(Model.ShortDescription)
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="span2">
+                @Html.ActionLink("Read More...", "Post", "Blog",
+                                 new
+                                     {
+                                         year = Model.PostedOn.Year,
+                                         month = Model.PostedOn.Month,
+                                         title = Model.UrlSlug
+                                     },
+                                 new
+                                     {
+                                         title = "Read the full article: " + Model.Title,
+                                         @class = "readMore"
+                                     }
+                     )
+            </div> 
+            <div class="offset10"></div>
+        </div>
     </div>
-
-    <!--Short Description-->
-    <div class="post-body">
-        @Html.Raw(Model.ShortDescription)
+    <div class="row-fluid">
+        <div class="post-separator span12"></div>
     </div>
- 
-    <div class="post-foot">
-        @Html.ActionLink("Read More...", "Post", "Blog",
-                         new
-                             {
-                                 year = Model.PostedOn.Year,
-                                 month = Model.PostedOn.Month,
-                                 title = Model.UrlSlug
-                             },
-                         new
-                             {
-                                 title = "Read the full article: " + Model.Title,
-                                 @class = "readMore"
-                             }
-             )
-    </div>
-    
 </div>

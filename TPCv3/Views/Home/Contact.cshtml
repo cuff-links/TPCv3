@@ -9,60 +9,45 @@
 <h2>Drop Me A Line</h2>
  
 <div id="content">
-  @using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "contactForm", OnFailure = "ajaxFailure" }))
+  @using (Ajax.BeginForm(null, null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "contactForm", OnFailure = "ajaxFailure" }, new { @class = "form-horizontal" }))
   {
-      <table id="contactFormTable">
-          <tr>
-              <td class="alignRight">
-                  @Html.LabelFor(m => m.Name):
-              </td>
-              <td class="alignLeft">
-                  @Html.TextBoxFor(m => m.Name, new Dictionary<string, object>{{"class","contactForm"}})
-                  @Html.ValidationMessageFor(m => m.Name)
-              </td>
-          </tr>
-          <tr>
-              <td class="alignRight">
-                  @Html.LabelFor(m => m.Email):
-              </td>
-              <td class="alignLeft">
-                  @Html.TextBoxFor(m => m.Email, new Dictionary<string, object>{{"class","contactForm"}})
-                  @Html.ValidationMessageFor(m => m.Email)
-              </td>
-          </tr>
-          <tr>
-              <td class="alignRight">
-                  @Html.LabelFor(m => m.Website):
-              </td>
-              <td class="alignLeft">
-                  @Html.TextBoxFor(m => m.Website, new Dictionary<string, object>{{"class","contactForm"}})
-                  @Html.ValidationMessageFor(m => m.Website)
-              </td>
-          </tr>
-          <tr>
-              <td class="alignRight">
-                  @Html.LabelFor(m => m.Subject):
-              </td>
-              <td class="alignLeft">
-                  @Html.TextBoxFor(m => m.Subject, new Dictionary<string, object>{{"class","contactForm"}})
-                  @Html.ValidationMessageFor(m => m.Subject)
-              </td>
-          </tr>
-          <tr>
-              <td  class="alignRight" style="vertical-align: top;clear: left;">
-                  @Html.LabelFor(m => m.Body):
-              </td>
-              <td class="alignLeft" style="clear: right;">
-                  @Html.TextAreaFor(m => m.Body, new Dictionary<string, object>{{"rows", 10}})
-                  @Html.ValidationMessageFor(m => m.Body, null, new Dictionary<string, object>{{"style", "vertical-align:top"}})
-              </td>
-          </tr>
-      </table>
-      <div style="float: left; width: 100%;margin-top: 150px;">
-          <p>
-              <a id="submitContactButton" href="#" onclick="$('#form0').submit();">Submit</a>
-          </p>
+      <div class="control-group">
+          @Html.LabelFor(m => m.Name, new Dictionary<string, object>{{"class","control-label"}})
+          <div class="controls">
+              @Html.TextBoxFor(m => m.Name, new Dictionary<string, object>{{"placeholder","Name"}, {"class", "span8"}})
+              @Html.ValidationMessageFor(m => m.Name)
+          </div>
+      </div>  
+      <div class="control-group">
+          @Html.LabelFor(m => m.Email, new Dictionary<string, object>{{"class","control-label"}})
+          <div class="controls">
+              @Html.TextBoxFor(m => m.Email  , new Dictionary<string, object>{{"placeholder","Email Address"}, {"class", "span8"}})
+              @Html.ValidationMessageFor(m => m.Email)
+          </div>
+      </div> 
+      <div class="control-group">
+          @Html.LabelFor(m => m.Website, new Dictionary<string, object>{{"class","control-label"}})
+          <div class="controls">
+              @Html.TextBoxFor(m => m.Website, new Dictionary<string, object>{{"placeholder","Website"}, {"class", "span8"}})
+              @Html.ValidationMessageFor(m => m.Website)
+          </div>
+      </div> 
+     <div class="control-group">
+          @Html.LabelFor(m => m.Subject, new Dictionary<string, object>{{"class","control-label"}})
+          <div class="controls">
+              @Html.TextBoxFor(m => m.Subject  , new Dictionary<string, object>{{"placeholder","Subject"}, {"class", "span8"}})
+              @Html.ValidationMessageFor(m => m.Subject)
+          </div>
+      </div> 
+      <div class="control-group">
+          @Html.LabelFor(m => m.Body, new Dictionary<string, object>{{"class","control-label"}})
+          <div class="controls">
+              @Html.TextAreaFor(m => m.Body  , new Dictionary<string, object>{{"placeholder","Body of message"}, {"class", "span8"}, {"style","resize:none"}})
+              @Html.ValidationMessageFor(m => m.Email)
+          </div>
+      </div> 
+      <div class="control-group">
+          <input type="submit" value="Submit" class="btn-large btn-primary offset7"/>
       </div>
-      
   }
 </div>
