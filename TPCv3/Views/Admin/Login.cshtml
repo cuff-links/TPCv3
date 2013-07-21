@@ -35,7 +35,7 @@
                             <div class="control-group">
                                 @Html.LabelFor(m => m.Password, new Dictionary<string, object>{{"class","control-label"}})
                                 <div class="controls">
-                                    @Html.TextBoxFor(m => m.Password, new Dictionary<string, object>{{"placeholder","Password"}})
+                                    @Html.TextBoxFor(m => m.Password, new Dictionary<string, object>{{"placeholder","Password"}, {"type", "password"}})
                                     @Html.ValidationMessageFor(m => m.Password)
                                 </div>
                             </div>
