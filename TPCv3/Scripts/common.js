@@ -70,3 +70,11 @@ function changeContactText(clickedLink) {
     }
     $('#contactLinkText').text(textToChange);
 }
+function submitButtonHover() {
+    $('#sendEmailButton').css('color', '#000000');
+    $('#sendEmailButton i').addClass('icon-black').removeClass('icon-white');
+}
+function submitButtonHoverStop() {
+    $('#sendEmailButton').css('color', '#FFFFFF');
+    $('#sendEmailButton i').removeClass('icon-black').addClass('icon-white');
+}

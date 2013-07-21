@@ -70,7 +70,7 @@
             <div id="contactInfo" class="row-fluid">
                 <p id="contactLinkText"></p>
             </div>
-            @using (Ajax.BeginForm(null, null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "contactForm", OnFailure = "ajaxFailure" }, new { @class = "form-horizontal" }))
+            @using (Ajax.BeginForm(null, null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "form0", OnFailure = "ajaxFailure" }, new { @class = "form-horizontal" }))
             {
                 <div class="control-group">
                     @Html.LabelFor(m => m.Name, new Dictionary<string, object> { { "class", "control-label" } })
@@ -108,7 +108,7 @@
                     </div>
                 </div> 
                 <div class="control-group pull-left span12">
-                    <a onclick="$('#form0').submit()" class="btn-primary btn-large span6 offset2 pull-left text-center">
+                    <a href="#sendEmailButton" id="sendEmailButton"  style="text-decoration: none" onmouseout="submitButtonHoverStop()" onmouseover="submitButtonHover()" onclick="$('#form0').submit()" class="btn-primary btn-large span6 offset2 pull-left text-center">
                         <i style="margin: 0 10px" class="icon-envelope icon-white"></i>Send Email
                     </a>
                 </div>

@@ -29,6 +29,8 @@
               type="text/css" media="screen" />
         <script type="text/javascript" src="@Url.Content("~/Scripts/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7")"> </script>
         <script src="@Url.Content("~/Scripts/common.js")" type="text/javascript"> </script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.min.js"></script>
     </head>
     <body>
         <!-- Here is the header of every page -->
@@ -79,6 +81,11 @@
                             <div class="row-fluid">@Html.Action("SideBars", "Blog")</div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="row-fluid">
+                    
                 </div>
             </div>
         </div>
