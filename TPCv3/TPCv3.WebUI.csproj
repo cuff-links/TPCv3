@@ -152,6 +152,8 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\aol-instant-messenger1.png" />
+    <Content Include="Content\images\Apps-Skype-icon.png" />
     <Content Include="Content\images\banner.png" />
     <Content Include="Content\images\banner1.png" />
     <Content Include="Content\images\banner2.jpg" />
@@ -162,9 +164,13 @@
     <Content Include="Content\images\Build_Software_Clear.png" />
     <Content Include="Content\images\Build_Software_White.png" />
     <Content Include="Content\images\Collaborate_White.png" />
+    <Content Include="Content\images\github-logo.png" />
     <Content Include="Content\images\dgrey037.jpg" />
+    <Content Include="Content\images\Email-icon-square.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\google-plus-logo.png" />
+    <Content Include="Content\images\linkedin-logo.png" />
     <Content Include="Content\images\Projects\Full\ionsFull.png" />
     <Content Include="Content\images\Projects\Thumbs\ionsThumb.png" />
     <Content Include="Content\images\Test_Software.png" />

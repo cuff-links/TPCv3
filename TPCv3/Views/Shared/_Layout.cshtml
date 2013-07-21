@@ -43,7 +43,6 @@
                     <a class="brand" href="/">The Power Coder</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li><a href="/">Home</a></li>
                             <li><a href="/Home/Portfolio">Portfolio</a></li>
                             <li><a href="/Blog/List">Blog</a></li>
                             <li><a href="/Home/About">About</a></li>
@@ -72,11 +71,13 @@
                         @RenderBody()
                     </div>
                     <div class="span3">
-                        <div class="feeddiv">
-                            <a href="http://feeds.feedburner.com/feed" title="Subscribe to my blog">Subscribe to my blog</a>
+                        <div class="container-fluid">
+                            <div class="feeddiv row-fluid">
+                                <a href="http://feeds.feedburner.com/feed" title="Subscribe to my blog">Subscribe to my blog</a>
+                            </div>
+                            <div class="row-fluid">@Html.Partial("_Search")</div>
+                            <div class="row-fluid">@Html.Action("SideBars", "Blog")</div>
                         </div>
-                        @Html.Partial("_Search")
-                        @Html.Action("SideBars", "Blog")
                     </div>
                 </div>
             </div>

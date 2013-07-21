@@ -10,8 +10,8 @@
                                                              {"class","navsearch pull-left"}
                                                          }) ) 
     {
-        @Html.TextBox("txtSearch", null, new Dictionary<string, object>{{"class", "search-query span9"}, {"placeholder", "Search Blog:"}})
-        <input class="btn-mini btn-primary" type="submit" value="Submit"/>
+        @Html.TextBox("txtSearch", null, new Dictionary<string, object>{{"class", "search-query span8"}, {"placeholder", "Search Blog:"}})
+        <input class="btn btn-primary" type="submit" value="Submit"/>
         @Html.Hidden("searchPage", 1) 
 
     }

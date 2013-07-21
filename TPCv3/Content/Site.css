@@ -598,7 +598,7 @@ div.pager a:hover {
 
 .categoriesDiv, .latestPostsDiv
 {
-    min-height: 200px;
+    min-height: 150px;
 }
 
 .tags

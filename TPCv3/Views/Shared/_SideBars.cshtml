@@ -1,8 +1,14 @@
 ﻿@model TPCv3.Models.WidgetViewModel
 
  
-<div>
-  @Html.Partial("_Categories", Model.Categories)
-  @Html.Partial("_Tags", Model.Tags)
-  @Html.Partial("_LatestPosts", Model.LatestPosts)
+<div class="container-fluid">
+    <div class="row-fluid">
+        @Html.Partial("_Categories", Model.Categories)
+    </div>
+    <div class="row-fluid">
+        @Html.Partial("_Tags", Model.Tags)
+    </div>
+    <div class="row-fluid">
+        @Html.Partial("_LatestPosts", Model.LatestPosts)
+    </div>
 </div>

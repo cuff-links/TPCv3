@@ -14,7 +14,7 @@ namespace TPCv3.Controllers{
     public class BlogController : Controller{
         #region Constants and Fields
 
-        private const int itemsPerPage = 2;
+        private const int ItemsPerPage = 2;
         private readonly IBlogRepository _blogRepository;
 
         #endregion
@@ -45,27 +45,22 @@ namespace TPCv3.Controllers{
             }
             ViewBag.Title = String.Format(@"Latest posts on category ""{0}""", viewModel.Category.Name);
 
-            viewModel.Posts = viewModel.Posts.Take(itemsPerPage);
+            viewModel.Posts = viewModel.Posts.Take(ItemsPerPage);
             return View("List", viewModel);
         }
 
 
         public virtual
-            ActionResult List
-            (int
-                 page = 1){
+            ActionResult List(int page = 1){
             var viewModel = new ListPostViewModel(_blogRepository, page);
 
             ViewBag.Title = "Latest Posts";
-            viewModel.Posts = viewModel.Posts.Take(itemsPerPage);
+            viewModel.Posts = viewModel.Posts.Take(ItemsPerPage);
             return View("List", viewModel);
         }
 
         //Get Blog/Tag Action
-        public virtual
-            ViewResult Tag
-            (string tag, int tagPage =
-                             1){
+        public virtual ViewResult Tag(string tag, int tagPage = 1){
             var viewModel = new ListPostViewModel(_blogRepository, tag, "Tag", tagPage);
 
             if (viewModel.Tag == null){
@@ -79,30 +74,26 @@ namespace TPCv3.Controllers{
             }
             ViewBag.Title = String.Format(@"Latest posts tagged on ""{0}""", viewModel.Tag.Name);
 
-            viewModel.Posts = viewModel.Posts.Take(itemsPerPage);
+            viewModel.Posts = viewModel.Posts.Take(ItemsPerPage);
             return View("List", viewModel);
         }
 
         //Get Blog/Search Action
 
 
-        public virtual
-            ViewResult Search
-            (string txtSearch, int page = 1){
+        public virtual ViewResult Search(string txtSearch, int page = 1){
             ViewBag.Title = String.Format(@"Lists of posts found 
                         for search text ""{0}""", txtSearch);
 
             var viewModel = new ListPostViewModel(_blogRepository, txtSearch, "Search",
                                                   page);
 
-            viewModel.Posts = viewModel.Posts.Take(itemsPerPage);
+            viewModel.Posts = viewModel.Posts.Take(ItemsPerPage);
             return View("List", viewModel);
         }
 
         //Get Blog/Posts Action
-        public virtual
-            ViewResult Post
-            (int month, int year, string title){
+        public virtual ViewResult Post(int month, int year, string title){
             Post post = _blogRepository.Post(month, year, title);
 
             if (post == null){
@@ -116,9 +107,7 @@ namespace TPCv3.Controllers{
         }
 
         //Get Blog/Feed Action
-        public virtual
-            ViewResult Feed
-            (){
+        public virtual ViewResult Feed(){
             // Create a collection of SyndicationItemobjects from the latest posts
             var posts = _blogRepository.Posts(0, 25).OrderByDescending(p => p.PostedOn);
             Response.ContentType = "text/xml";
@@ -126,11 +115,8 @@ namespace TPCv3.Controllers{
         }
 
         //Get PartialViewResult Action Blog/Sidebars
-        [
-            ChildActionOnly]
-        public
-        PartialViewResult SideBars
-            (){
+        [ChildActionOnly]
+        public PartialViewResult SideBars(){
             var widgetModel = new WidgetViewModel(_blogRepository);
             return PartialView("_Sidebars", widgetModel);
         }

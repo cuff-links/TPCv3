@@ -6120,11 +6120,12 @@ a.badge:focus {
 .hero-unit {
   padding: 60px;
   margin-bottom: 30px;
+  border-top: #04acec 3px solid;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #111;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;

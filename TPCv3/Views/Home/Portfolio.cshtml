@@ -19,17 +19,19 @@ else
     <h4>@ViewBag.Caption</h4>
 }
 
-<div class=" container-fluid">
+<div class="container-fluid">
     <div class="span2">
         @Html.Action("PortfolioSideBar", "Home")
     </div>
     <div class="span9 offset1">
+        <h1 style="margin-top: 15px;">Gallery</h1>
         <ul class="thumbnails">
-            @if (Model.Projects.Any()){
+            @if (Model.Projects.Any())
+            {
                 var listProjects = Model.Projects.ToArray();
                 foreach (Project project in listProjects)
                 {
-                    <li class="span4" >@Html.Partial("_ProjectTemplate", project)</li>
+                    <li class="span4">@Html.Partial("_ProjectTemplate", project)</li>
                 }
             }
             else
@@ -37,8 +39,10 @@ else
                 <li>No projects found!</li>
             }
         </ul>
+    </div>
+    <div class="row-fluid">
         <div class="pager">
-            @(Model.CurrentCategory != null ? Html.PageLinks(Model.PagingInfo, x => Url.Action("ProjectCategory", new {projectCategoryPage = x})) : Html.PageLinks(Model.PagingInfo, x => Url.Action("Portfolio", new {portfolioPage = x})))
+            @(Model.CurrentCategory != null ? Html.PageLinks(Model.PagingInfo, x => Url.Action("ProjectCategory", new { projectCategoryPage = x })) : Html.PageLinks(Model.PagingInfo, x => Url.Action("Portfolio", new { portfolioPage = x })))
         </div>
     </div>
 </div>

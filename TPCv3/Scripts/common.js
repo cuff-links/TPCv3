@@ -35,3 +35,38 @@
         // time between transitions
     });
 });
+function changeContactText(clickedLink) {
+    var textToChange;
+    switch (clickedLink) {
+        case 'github':
+            {
+                textToChange = 'Github: www.github.com/silne30';
+                break;
+            }
+        case 'email':
+            {
+                textToChange = 'Email: contact@thepowercoder.com';
+                break;
+            }
+        case 'aim':
+            {
+                textToChange = 'AOL Instant Messenger: thepowercoder';
+                break;
+            }
+        case 'skype':
+            {
+                textToChange = 'Skype: John.Dorlus';
+                break;
+            }
+        case 'linkedin':
+            {
+                textToChange = 'LinkedIn: www.linkedin.com/in/johndorlus';
+                break;
+            }
+        default:
+            {
+                textToChange = 'Google+: Silne.Dorlus@gmail.com';
+            }
+    }
+    $('#contactLinkText').text(textToChange);
+}
