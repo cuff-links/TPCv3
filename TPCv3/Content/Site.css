@@ -181,7 +181,10 @@
     zoom: 1;
 }
 /* IE6 */
-
+html,body 
+{
+height: 100%;
+}
 *:first-child + html #menu
 {
     zoom: 1;
@@ -260,82 +263,36 @@ div.feeddiv a:hover{
     padding-top: 20px;
     width: 100%;
 }
-.push, .footer
-{
-    height: 150px;
-    clear: both;
-}
 #footer
 {
     border-top: #04acec solid 1px;
-    background-color: black;
-    float: left;
-    margin-top: 100px;
-    text-align: center;
-    min-width: 100%;
-    min-height: 500px;
+    height: 400px;
+    padding-top: 40px;
+    margin-top: 160px;
 }
-.footerTripleColumns
+#wrap 
 {
-    float: left;
-    width: 318px;
-    min-height: 300px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -60px;
 }
-.middleFooterColumn
+      /* Set the fixed height of the footer here */
+#push
 {
-    border-left: #04acec solid 1px;
-    border-right: #04acec solid 1px;
+    height: 60px;
 }
-
-#footer dl, #footer div dd, #footer dl dt
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) 
 {
-    float: left;
-    padding: 0;
-    width: 165px;
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
-
-#footer div dd a, #footer dl dt a
-{
-    color: white;
-}
-
-#footer div dd a:hover, #footer dl dt a:hover
-{
-    color: #04acec;
-}
-
-#footer dl
-{
-    margin: 0;
-}
-
-#footer dl dt
-{
-    font-weight: bold;
-    margin: 20px 0 0 0;
-}
-
-#footer dl dd
-{
-    font-style: italic;
-    margin: 0;
-}
-
-#footerWrapper
-{
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px;
-}
-#something
-{
-    margin-top: 30px;
-    border-top: #cdcdcd solid 1px;
-    float: left;
-    width: 100%;
-    min-width: 500px;
-}
-
 li.noStyle
 {
     list-style: none;
@@ -349,7 +306,7 @@ li.noStyle
 
 a
 {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 a img

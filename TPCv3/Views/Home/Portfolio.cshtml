@@ -20,25 +20,27 @@ else
 }
 
 <div class="container-fluid">
-    <div class="span2">
-        @Html.Action("PortfolioSideBar", "Home")
-    </div>
-    <div class="span9 offset1">
-        <h1 style="margin-top: 15px;">Gallery</h1>
-        <ul class="thumbnails">
-            @if (Model.Projects.Any())
-            {
-                var listProjects = Model.Projects.ToArray();
-                foreach (Project project in listProjects)
+    <div class="row-fluid">
+        <div class="span2">
+            @Html.Action("PortfolioSideBar", "Home")
+        </div>
+        <div class="span9 offset1">
+            <h1 style="margin-top: 15px;">Gallery</h1>
+            <ul class="thumbnails">
+                @if (Model.Projects.Any())
                 {
-                    <li class="span4">@Html.Partial("_ProjectTemplate", project)</li>
+                    var listProjects = Model.Projects.ToArray();
+                    foreach (Project project in listProjects)
+                    {
+                        <li class="span4">@Html.Partial("_ProjectTemplate", project)</li>
+                    }
                 }
-            }
-            else
-            {
-                <li>No projects found!</li>
-            }
-        </ul>
+                else
+                {
+                    <li>No projects found!</li>
+                }
+            </ul>
+        </div>
     </div>
     <div class="row-fluid">
         <div class="pager">

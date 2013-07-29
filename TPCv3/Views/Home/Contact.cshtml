@@ -89,7 +89,7 @@
                 <div class="control-group">
                     @Html.LabelFor(m => m.Website, new Dictionary<string, object> { { "class", "control-label" } })
                     <div class="controls">
-                        @Html.TextBoxFor(m => m.Website, new Dictionary<string, object> { { "placeholder", "i.e. www.thepowercoder.com" }, { "class", "span7" } })
+                        @Html.TextBoxFor(m => m.Website, new Dictionary<string, object> { { "placeholder", "i.e. http://www.thepowercoder.com" }, { "class", "span7" } })
                         @Html.ValidationMessageFor(m => m.Website)
                     </div>
                 </div> 
@@ -108,7 +108,7 @@
                     </div>
                 </div> 
                 <div class="control-group pull-left span12">
-                    <a href="#contactGallery" id="sendEmailButton"  style="text-decoration: none" onmouseout="submitButtonHoverStop()" onmouseover="submitButtonHover()" onclick="$('#form0').submit()" class="btn-primary btn-large span6 offset2 pull-left text-center">
+                    <a href="#name" id="sendEmailButton"  style="text-decoration: none" onmouseout="submitButtonHoverStop()" onmouseover="submitButtonHover()" onclick="$('#form0').submit()" class="btn-primary btn-large span6 offset2 pull-left text-center">
                         <i style="margin: 0 10px" class="icon-envelope icon-white"></i>Send Email
                     </a>
                 </div>

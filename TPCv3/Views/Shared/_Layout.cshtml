@@ -33,59 +33,103 @@
         <script src="http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.validate.unobtrusive.min.js"></script>
     </head>
     <body>
-        <!-- Here is the header of every page -->
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="brand" href="/">The Power Coder</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li><a href="/Home/Portfolio">Portfolio</a></li>
-                            <li><a href="/Blog/List">Blog</a></li>
-                            <li><a href="/Home/About">About</a></li>
-                            <li><a href="/Home/Contact">Contact</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
-        <div  class="container-fluid">
-            <div id="header">
-                <div class="row-fluid">
-                    <div id="headerLeft" class="span4">
-                        <div>
-                            <a href="@Url.RouteUrl("Default", new { action = "Index", controller = "Home" }, Request.Url.Scheme)">
-                                <img id="banner" src="@Url.Content("~/Content/images/banner.png")" alt="Banner" /></a>
+        <div id="wrap">
+            <!-- Here is the header of every page -->
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="brand" href="/">The Power Coder</a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li><a href="/Home/Portfolio">Portfolio</a></li>
+                                <li><a href="/Blog/List">Blog</a></li>
+                                <li><a href="/Home/About">About</a></li>
+                                <li><a href="/Home/Contact">Contact</a></li>
+                            </ul>
                         </div>
+                        <!--/.nav-collapse -->
                     </div>
-                    <div class="offset8"></div>
                 </div>
             </div>
-            <!-- Here is the middle section of the page or the body -->
-            <div id="body">
+            <div class="container-fluid">
                 <div class="row-fluid">
-                    <div class="span9">
-                        @RenderBody()
-                    </div>
-                    <div class="span3">
-                        <div class="container-fluid">
-                            <div class="feeddiv row-fluid">
-                                <a href="http://feeds.feedburner.com/feed" title="Subscribe to my blog">Subscribe to my blog</a>
+                    <div id="header">
+                        <div id="headerLeft" class="span4">
+                            <div>
+                                <a href="@Url.RouteUrl("Default", new { action = "Index", controller = "Home" }, Request.Url.Scheme)">
+                                    <img id="banner" src="@Url.Content("~/Content/images/banner.png")" alt="Banner" /></a>
                             </div>
-                            <div class="row-fluid">@Html.Partial("_Search")</div>
-                            <div class="row-fluid">@Html.Action("SideBars", "Blog")</div>
+                        </div>
+                        <div class="offset8"></div>
+                    </div>
+                </div>
+                <!-- Here is the middle section of the page or the body -->
+                <div class="row-fluid">
+                    <div id="body">
+                        <div class="span9">
+                            @RenderBody()
+                        </div>
+                        <div class="span3">
+                            <div class="container-fluid">
+                                <div class="feeddiv row-fluid">
+                                    <a href="http://feeds.feedburner.com/feed" title="Subscribe to my blog">Subscribe to my blog</a>
+                                </div>
+                                <div class="row-fluid">@Html.Partial("_Search")</div>
+                                <div class="row-fluid">@Html.Action("SideBars", "Blog")</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="footer">
-                <div class="row-fluid">
-                    
+            <div id="push"></div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div id="footer" >
+                    <div class="span4">
+                        <h3>
+                            Couldn't have done this without the help of my better half.
+                            Thank you, Honey!!!
+                        </h3> 
+                    </div>
+                    <div class="span4">
+                        <h3>
+                            Little about myself
+                        </h3>
+                    </div>
+                    <div class="span4">
+                        <h3>
+                            A Good Read
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span4">
+                    <h2>
+                        Recent Projects
+                    </h2>
+                </div>
+                <div class="span4 container-fluid">
+                    <div class="row-fluid">
+                        <h3>Current Projects</h3>
+                    </div>
+                    <div class="row-fluid">
+                        <h3>Topics of Interest</h3>
+                    </div>
+                </div>
+                <div class="span4 container-fluid" >
+                    <div class="row-fluid">
+                        <h3>Announcements</h3>
+                    </div>
+                    <div class="row-fluid">
+                        <h3>Topics of Interest</h3>
+                    </div>
                 </div>
             </div>
         </div>
